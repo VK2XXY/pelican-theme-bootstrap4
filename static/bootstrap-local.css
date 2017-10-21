@@ -1,0 +1,15 @@
+.bg-darkgreen {
+    background-color: #384B16 !important;
+}
+
+.nav-link:focus {
+    color: rgba(255,255,0,.75) !important;
+}
+
+.nav-link:hover {
+    color: rgba(255,255,0,.75) !important;
+}
+
+.nav-link {
+    color: rgba(255,255,0,.5) !important;
+}
