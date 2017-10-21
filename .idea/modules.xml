@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bootstrap1-1.iml" filepath="$PROJECT_DIR$/.idea/bootstrap1-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bootstrap3-w3.iml" filepath="$PROJECT_DIR$/.idea/bootstrap3-w3.iml" />
+      <module fileurl="file://Z:/github-pages-manager/.idea/github-pages-manager.iml" filepath="Z:/github-pages-manager/.idea/github-pages-manager.iml" />
     </modules>
   </component>
 </project>
