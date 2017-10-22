@@ -47,7 +47,7 @@
 	{% include "facebook.html" %}
 	{% include "github.html" %}
 	<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-darkgreen">
-        <a class="navbar-brand" href="/">Roland James Askew</a>
+        <a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -55,23 +55,21 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/about.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/past-projects.html">Past Projects</a>
-                </li>
+                {% for title, link in MENUITEMS %}
+					<li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
+				{% endfor %}
+				{% if DISPLAY_PAGES_ON_MENU %}
+					{% for page in pages %}
+						<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+					{% endfor %}
+				{% endif %}
             </ul>
-            <span class="navbar-nav">
-                <a class="nav-link" href="/archives.html">[archives]</a>
-                <a class="nav-link" href="/tags.html">[tags]</a>
-            </span>
         </div>
 	</nav>
 
 	<div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-md-3 col-xl-2">
+            <div class="col-xs-12 col-sm-5 col-md-4">
                 <div class="card card-body">
                     <h3 class="card-title">Blogroll</h3>
                     <hr/>
@@ -94,6 +92,7 @@
                 </div>
                 <br/>
 
+                {% if categories and categories|length > 0 %}
                 <div class="card card-body">
                     <h3 class="card-title">Categories</h3>
                     <hr/>
@@ -104,7 +103,9 @@
                     </ul>
                 </div>
                 <br/>
+                {% endif %}
 
+                {% if tags and tags|length > 0 %}
                 <div class="card card-body">
                     <h3 class="card-title">Tags</h3>
                     <hr/>
@@ -114,8 +115,23 @@
                         {% endfor %}
                     </ul>
                 </div>
+                <br/>
+                {% endif %}
+
+                {% if archives and archives|length > 0 %}
+                <div class="card card-body">
+                    <h3 class="card-title">Archives</h3>
+                    <hr/>
+                    <ul class="card-text">
+                        {% for post, null in archives %}
+                            <li><a href="{{ SITEURL }}/{{ post.url }}">{{ post }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
             </div>
-            <div class="col-xs-12 col-sm-8 com-md-9 col-xl-10">
+            <div class="col-xs-12 col-sm-7 com-md-8">
                 <div class="content">
                     {% block indextitle %}<div class="page-header"><h1>{% block title %} {{ self.windowtitle() }} {% endblock %}</h1></div>{% endblock %}
                     {% block content %}{% endblock %}
