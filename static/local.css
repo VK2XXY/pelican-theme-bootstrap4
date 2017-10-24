@@ -1,23 +1,58 @@
 body { margin: 4px; padding-top: 120px !important; padding-bottom: 200px !important; overflow-y:visible; }
-div.article { padding-top: 20px; }
-div.article h2 { padding-bottom: 10px; }
+
+.bg-darkgreen {
+    background-color: #384B16 !important;
+}
+
+.card-bg-lt-grey {
+    background-color: #E1E1E1 !important;
+}
+
+.nav-link:focus {
+    color: rgba(255,255,0,1.0) !important;
+}
+
+.nav-link:hover {
+    color: rgba(255,255,0,1.0) !important;
+}
+
+.nav-link {
+    color: rgba(255,255,0,.8) !important;
+}
+
+.page-header {
+    margin: auto;
+}
+
+.article-header {
+    padding: 12px 0 8px 8px;
+}
+
+.metadata {
+
+}
+
+.card-body-lgt-grey {
+    background-color: #F8F8F8 !important;
+}
+
+.summary {
+    padding: 12px 8px 16px 8px;
+}
+
+.btn-summary {
+    margin-left: 12px;
+}
 
 div.highlight pre {
   background-color: #fefbf3;
   margin: 0 0 10px;
 }
 
-.well.small {
-	padding: 6px 6px 4px;
+.pagination {
+    margin-top: 24px;
+    padding: 8px;
 }
-
-.btn.xsmall {
-  padding: 1px 3px 1px;
-  font-size: 11px;
-}
-
-.summary * { display: inline; }
-.summary pre { display: none; }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
