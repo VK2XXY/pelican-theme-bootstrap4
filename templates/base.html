@@ -10,6 +10,8 @@
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
@@ -44,8 +46,8 @@
 <body>
 	{% include "facebook.html" %}
 	{% include "github.html" %}
-	<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-darkgreen">
-        <a class="navbar-brand" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+	<nav class="navbar fixed-top navbar-expand-sm w3-2017-navy-peony">
+        <a class="navbar-brand w3-text-pale-blue" href="{{ SITEURL }}/">{{ SITENAME }}</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,17 +56,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for title, link in MENUITEMS %}
-					<li class="nav-item"><a class="nav-link" href="{{ link }}">{{ title }}</a></li>
+					<li class="nav-item"><a class="nav-link"
+                                            href="{{ link }}">{{ title }}</a></li>
 				{% endfor %}
 				{% if DISPLAY_PAGES_ON_MENU %}
 					{% for page in pages %}
-						<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+						<li class="nav-item"><a class="nav-link w3-text-light-blue" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
 					{% endfor %}
 				{% endif %}
             </ul>
 
             <p class="nav-text float-right">
-                <a class="nav-link" href="{{ SITEURL }}/archives.html">archives</a>
+                <small><a class="nav-link w3-text-light-blue" href="{{ SITEURL }}/archives.html">archives</a></small>
             </p>
         </div>
 	</nav>
@@ -88,7 +91,7 @@
                     <hr/>
                     <ul class="card-text">
                         {% for name, link in SOCIAL %}
-                            <li><a href="{{ link }}">{{ name }}</a></li>
+                            <li class="social"><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -143,10 +146,13 @@
 	</div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
-        <p class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>.</p>
+        <p class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></p>
         <p class="navbar-text">&copy; {{ AUTHOR }}</p>
     </nav>
 
+    <script>
+        setTimeout(function(){ window.location.href='.'; }, 3000);
+    </script>
 
 </body>
 </html>

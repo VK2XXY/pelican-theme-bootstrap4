@@ -1,23 +1,25 @@
 body { margin: 4px; padding-top: 120px !important; padding-bottom: 200px !important; overflow-y:visible; }
 
-.bg-darkgreen {
-    background-color: #384B16 !important;
+.w3-text-pale-blue {
+    color: #EAF3FC !important;
 }
 
-.card-bg-lt-grey {
-    background-color: #E1E1E1 !important;
+a.navbar-brand.w3-text-pale-blue:hover {
+    color: #ffffff !important;
 }
 
-.nav-link:focus {
-    color: rgba(255,255,0,1.0) !important;
+a.nav-link.w3-text-light-blue:hover {
+    color: #B6E3F7 !important;
 }
 
-.nav-link:hover {
-    color: rgba(255,255,0,1.0) !important;
+// do social cards, metadata cards and other cards.
+
+.metadata-link {
+
 }
 
-.nav-link {
-    color: rgba(255,255,0,.8) !important;
+div.card.card-body.w3-highway-green {
+    background-color: #004d33!important;
 }
 
 .page-header {
@@ -30,10 +32,6 @@ body { margin: 4px; padding-top: 120px !important; padding-bottom: 200px !import
 
 .metadata {
 
-}
-
-.card-body-lgt-grey {
-    background-color: #F8F8F8 !important;
 }
 
 .summary {
