@@ -1,4 +1,8 @@
-body { margin: 4px; padding-top: 120px !important; padding-bottom: 200px !important; overflow-y:visible; }
+body {
+    margin: 4px; padding-top: 80px !important; padding-bottom: 60px !important; overflow-y:visible;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,monospace;
+    color:#223a5e;
+}
 
 .w3-text-pale-blue {
     color: #EAF3FC !important;
@@ -12,14 +16,52 @@ a.nav-link.w3-text-light-blue:hover {
     color: #B6E3F7 !important;
 }
 
-// do social cards, metadata cards and other cards.
-
-.metadata-link {
-
+.navbar-footer-link  {
+    color: #EAF3FC !important;
 }
 
-div.card.card-body.w3-highway-green {
-    background-color: #004d33!important;
+.navbar-footer-link:hover  {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+div.card.card-body.card-sidebar {
+    background-color: #223a5e!important;
+}
+
+div.card.card-body.card-sidebar h3 {
+    color: #87CEEB!important;
+}
+
+div.card.card-body.card-sidebar hr {
+    background-color: #87CEEB!important;
+}
+
+div.card.card-body.card-sidebar a {
+    color: #87CEEB!important;
+}
+
+div.card.card-body.card-sidebar ul {
+    margin-left:-24px;
+}
+
+div.card.card-body.card-sidebar a:hover {
+    color: #B6E3F7!important;
+    text-decoration: none;
+}
+
+.card-metadata {
+    background-color: #E0E6EC!important;
+    margin-bottom:8px;
+    padding: 0.75rem !important;
+}
+
+a.link-metadata {
+    color:#007bff;
+}
+
+a.link-metadata:hover {
+    color:#223a5e;
 }
 
 .page-header {
@@ -27,19 +69,18 @@ div.card.card-body.w3-highway-green {
 }
 
 .article-header {
-    padding: 12px 0 8px 8px;
-}
-
-.metadata {
-
+    padding: 0 0 12px 8px;
+    margin: 32px 0 0 0;
 }
 
 .summary {
     padding: 12px 8px 16px 8px;
+    display: inline;
 }
 
 .btn-summary {
-    margin-left: 12px;
+    margin: 8px 0 0 8px;
+    display: inline;
 }
 
 div.highlight pre {

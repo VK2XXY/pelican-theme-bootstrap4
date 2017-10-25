@@ -75,7 +75,7 @@
 	<div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <div class="card card-body">
+                <div class="card card-body card-sidebar">
                     <h3 class="card-title">Blogroll</h3>
                     <hr/>
                     <ul class="card-text">
@@ -86,7 +86,7 @@
                 </div>
                 <br/>
 
-                <div class="card card-body">
+                <div class="card card-body card-sidebar">
                     <h3 class="card-title">Social</h3>
                     <hr/>
                     <ul class="card-text">
@@ -98,7 +98,7 @@
                 <br/>
 
                 {% if authors and authors|length > 0 %}
-                <div class="card card-body">
+                <div class="card card-body card-sidebar">
                     <h3 class="card-title">Authors</h3>
                     <hr/>
                     <ul class="card-text">
@@ -111,7 +111,7 @@
                 {% endif %}
 
                 {% if categories and categories|length > 0 %}
-                <div class="card card-body">
+                <div class="card card-body card-sidebar">
                     <h3 class="card-title">Categories</h3>
                     <hr/>
                     <ul class="card-text">
@@ -124,7 +124,7 @@
                 {% endif %}
 
                 {% if tags and tags|length > 0 %}
-                <div class="card card-body">
+                <div class="card card-body card-sidebar">
                     <h3 class="card-title">Tags</h3>
                     <hr/>
                     <ul class="card-text">
@@ -145,13 +145,20 @@
         </div>
 	</div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light bg-light">
-        <p class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></p>
-        <p class="navbar-text">&copy; {{ AUTHOR }}</p>
+    <nav class="navbar fixed-bottom navbar-expand-sm w3-2017-navy-peony w3-text-light-blue">
+        <small class="navbar-text mr-auto">Powered by <a class="navbar-footer-link" href="http://getpelican.com/">Pelican</a>. Theme based on <a class="navbar-footer-link" href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a class="navbar-footer-link" href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
+        <small class="navbar-text w3-text-pale-blue" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
     </nav>
 
     <script>
-        setTimeout(function(){ window.location.href='.'; }, 3000);
+        // TODO: fix this.
+        $(window).resize( function() {
+            if ($(window).width() < 508) {
+                $('body').css('padding-bottom', '80px !important');
+            } else {
+                $('body').css('padding-bottom', '60px !important');
+            }
+        });
     </script>
 
 </body>
