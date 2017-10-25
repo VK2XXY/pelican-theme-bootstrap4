@@ -1,7 +1,15 @@
 body {
-    margin: 4px; padding-top: 80px !important; padding-bottom: 60px !important; overflow-y:visible;
+    margin: 4px; padding-top: 80px !important; overflow-y:visible;
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,monospace;
     color:#223a5e;
+}
+
+.body-normal {
+    padding-bottom: 96px!important;
+}
+
+.body-narrow {
+    padding-bottom: 72px!important;
 }
 
 .w3-text-pale-blue {
@@ -53,7 +61,24 @@ div.card.card-body.card-sidebar a:hover {
 .card-metadata {
     background-color: #E0E6EC!important;
     margin-bottom:8px;
+}
+
+.card-metadata-text-normal {
+    font-size:1.0rem;
     padding: 0.75rem !important;
+}
+
+.card-metadata-text-small {
+    font-size:0.88rem;
+    padding: 0.4rem !important;
+}
+
+.summary-text-normal {
+    font-size:1.0rem;
+}
+
+.summary-text-small {
+    font-size:0.88rem;
 }
 
 a.link-metadata {
@@ -71,6 +96,18 @@ a.link-metadata:hover {
 .article-header {
     padding: 0 0 12px 8px;
     margin: 32px 0 0 0;
+}
+
+.archive-list {
+
+}
+
+.year-text {
+
+}
+
+.month-text {
+
 }
 
 .summary {

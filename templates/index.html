@@ -7,8 +7,8 @@
 <hr/>
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <div class='row'>
-    <div class="col-xs-12 col-sm-12">
-        <h3 class="article-header"> {{ article.title }} </h3>
+    <div class="col">
+        <p class="h3 article-header"> {{ article.title }} </p>
     </div>
 </div>
 <div class='row'>
@@ -17,18 +17,18 @@
     </div>
 </div>
 <div class='row'>
-    <div class="col-xs-12 col-sm-12">
-        <p class="summary">{{ article.summary }}
-	    </p>
+    <div class="col">
+        <p class="summary summary-text-normal">{{ article.summary }}
+        </p>
         <a class="btn btn-sm btn-summary w3-2017-navy-peony w3-text-light-blue"
                       href="{{ SITEURL }}/{{ article.url }}">more…</a>
 
     </div>
-</div>	
+</div>
 {% endfor %}
 
 <div class='row'>
-    <div class="col-xs-12">
+    <div class="col">
         {% if articles_page and articles_paginator.num_pages > 1 %}
         <nav class="justify-content-center" aria-label="Page navigation">
             <ul class="pagination justify-content-center">

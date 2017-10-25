@@ -43,7 +43,7 @@
 	{% include "analytics.html" %}
 	{% include "disqus.html" %}
 </head>
-<body>
+<body class="body-normal">
 	{% include "facebook.html" %}
 	{% include "github.html" %}
 	<nav class="navbar fixed-top navbar-expand-sm w3-2017-navy-peony">
@@ -136,9 +136,9 @@
                 <br/>
                 {% endif %}
             </div>
-            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                <div class="container-fluid">
-                    {% block indextitle %}<div class="page-header"><h1>{% block title %} {{ self.windowtitle() }} {% endblock %}</h1></div>{% endblock %}
+            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-auto">
+                <div id="index_content" class="container-fluid">
+                    {% block indextitle %}<p class="h1 page-header">{% block title %} {{ self.windowtitle() }} {% endblock %}</p>{% endblock %}
                     {% block content %}{% endblock %}
                 </div>
             </div>
@@ -151,14 +151,22 @@
     </nav>
 
     <script>
-        // TODO: fix this.
-        $(window).resize( function() {
-            if ($(window).width() < 508) {
-                $('body').css('padding-bottom', '80px !important');
+        window.onresize = function() {
+            if(window.innerWidth < 768) {
+                    $('body').removeClass('body-normal').addClass('body-narrow');
+                    $('#index_content').find('p.page-header').removeClass('h1').addClass('h2');
+                    $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
+                    $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-normal').addClass('card-metadata-text-small');
+                    $('#index_content').find('p.summary').removeClass('summary-text-normal').addClass('summary-text-small');
             } else {
-                $('body').css('padding-bottom', '60px !important');
-            }
-        });
+                    $('body').removeClass('body-narrow').addClass('body-normal');
+                    $('#index_content').find('p.page-header').removeClass('h2').addClass('h1');
+                    $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
+                    $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-small').addClass('card-metadata-text-normal');
+                    $('#index_content').find('p.summary').removeClass('summary-text-small').addClass('summary-text-normal');
+            };
+        };
+        window.onresize();
     </script>
 
 </body>
