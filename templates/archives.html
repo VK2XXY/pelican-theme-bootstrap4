@@ -1,58 +1,45 @@
 {% extends "base.html" %}
 {% block title %}Archive{% endblock %}
+
+{% block extra_scripts %}
+    function window_resize() {
+        if(window.innerWidth < 768) {
+                $('#index_content').find('li.year-text').removeClass('h2').addClass('h3');
+                $('#index_content').find('li.month-text').removeClass('h4').addClass('h5');
+                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-normal').addClass('card-metadata-text-small');
+        } else {
+                $('#index_content').find('li.year-text').removeClass('h3').addClass('h2');
+                $('#index_content').find('li.month-text').removeClass('h5').addClass('h4');
+                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-small').addClass('card-metadata-text-normal');
+        };
+    };
+{% endblock %}
+
 {% block content %}
 <hr/>
 
 <ul class="archive-list">
-	<li class="year-text">111
-		<ul>
-			<li class="month-text">AAA
-				<ul>
-					<li class="summary">
-						XXXXXX
+	{% for year, date_year in dates|groupby( 'date.year' ) %}
+	<li class="h2 year-text">{{ year }}
+		<ul class="archive-list">
+			{% for month, articles in date_year|groupby( 'date.month' ) %}
+			<li class="h4 month-text">{{ articles[ 0 ].date.strftime( '%B' ) }}
+				<ul class="archive-list">
+					{% for article in articles %}
+					<li class="archive-text">
+                        <div class="card card-body card-metadata card-metadata-text-normal">
+                            <a href="">{{ article.title }}</a>
+                        </div>
 					</li>
-					<li class="summary">
-						XXXXXX
-					</li>
-					<li class="summary">
-						XXXXXX
-					</li>
+					{% endfor %}
 				</ul>
 			</li>
+			{% endfor %}
 		</ul>
 	</li>
-	<li class="year-text">222
-		<ul>
-			<li class="month-text">AAA
-				<ul>
-					<li class="summary">
-						XXXXXX
-					</li>
-					<li class="summary">
-						XXXXXX
-					</li>
-				</ul>
-			</li>
-			<li class="month-text">BBB
-				<ul>
-					<li class="summary">
-						XXXXXX
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
+	{% endfor %}
 </ul>
 
-{% for year, date_year in dates|groupby( 'date.year' ) %}
-<p class="h2 article-header">{{ year }}</p>
-{% for month, articles in date_year|groupby( 'date.month' ) %}
-<p class="h3 article-header">{{ articles[ 0 ].date.strftime( '%B' ) }}</p>
-<ul>
-{% for article in articles %}
-	<li class="h3 article-header"><a href="{{ article.url }}">{{ article.title }}</a></li>
-{% endfor %}
-</ul>
-{% endfor %}
-{% endfor %}
 {% endblock %}
+
+

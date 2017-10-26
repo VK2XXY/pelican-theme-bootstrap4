@@ -16,12 +16,18 @@
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
 	<link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
+    {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
 	<script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+        function window_resize() {};
+        {% block extra_scripts %} {% endblock %}
+    </script>
+
 
 	<!-- Feeds -->
 	{% if FEED_ALL_ATOM %}
@@ -46,17 +52,19 @@
 <body class="body-normal">
 	{% include "facebook.html" %}
 	{% include "github.html" %}
-	<nav class="navbar fixed-top navbar-expand-sm w3-2017-navy-peony">
+	<nav class="navbar navbar-expand-sm fixed-top navbar-dark w3-2017-navy-peony">
         <a class="navbar-brand w3-text-pale-blue" href="{{ SITEURL }}/">{{ SITENAME }}</a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button type="button" class="navbar-toggler"
+                data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for title, link in MENUITEMS %}
-					<li class="nav-item"><a class="nav-link"
+					<li class="nav-item"><a class="nav-link w3-text-light-blue"
                                             href="{{ link }}">{{ title }}</a></li>
 				{% endfor %}
 				{% if DISPLAY_PAGES_ON_MENU %}
@@ -155,16 +163,11 @@
             if(window.innerWidth < 768) {
                     $('body').removeClass('body-normal').addClass('body-narrow');
                     $('#index_content').find('p.page-header').removeClass('h1').addClass('h2');
-                    $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
-                    $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-normal').addClass('card-metadata-text-small');
-                    $('#index_content').find('p.summary').removeClass('summary-text-normal').addClass('summary-text-small');
             } else {
                     $('body').removeClass('body-narrow').addClass('body-normal');
                     $('#index_content').find('p.page-header').removeClass('h2').addClass('h1');
-                    $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
-                    $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-small').addClass('card-metadata-text-normal');
-                    $('#index_content').find('p.summary').removeClass('summary-text-small').addClass('summary-text-normal');
             };
+            window_resize();
         };
         window.onresize();
     </script>

@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 {% block title %} Blog {% endblock %}
+
+{% block extra_scripts %}
+    function window_resize() {
+        if(window.innerWidth < 768) {
+                $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
+                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-normal').addClass('card-metadata-text-small');
+                $('#index_content').find('p.summary').removeClass('summary-text-normal').addClass('summary-text-small');
+        } else {
+                $('#index_content').find('p.article-header').removeClass('h3').addClass('h4');
+                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-small').addClass('card-metadata-text-normal');
+                $('#index_content').find('p.summary').removeClass('summary-text-small').addClass('summary-text-normal');
+        };
+    };
+{% endblock %}
+
+
 {% block content %}
 
 
