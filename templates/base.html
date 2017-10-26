@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Styles -->
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">
+	<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">-->
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
@@ -19,7 +19,7 @@
     {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
-	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
@@ -52,8 +52,10 @@
 <body class="body-normal">
 	{% include "facebook.html" %}
 	{% include "github.html" %}
-	<nav class="navbar navbar-expand-sm fixed-top navbar-dark w3-2017-navy-peony">
-        <a class="navbar-brand w3-text-pale-blue" href="{{ SITEURL }}/">{{ SITENAME }}</a>
+	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue">
+        <a class="navbar-brand" href="{{ SITEURL }}/">
+            <img src="/images/sitebrand.png" width="30" height="30" alt="SiteBrand">
+        </a>
         <button type="button" class="navbar-toggler"
                 data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -64,29 +66,31 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for title, link in MENUITEMS %}
-					<li class="nav-item"><a class="nav-link w3-text-light-blue"
+					<li class="nav-item"><a class="nav-link"
                                             href="{{ link }}">{{ title }}</a></li>
 				{% endfor %}
 				{% if DISPLAY_PAGES_ON_MENU %}
 					{% for page in pages %}
-						<li class="nav-item"><a class="nav-link w3-text-light-blue" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+						<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
 					{% endfor %}
 				{% endif %}
             </ul>
 
-            <p class="nav-text float-right">
-                <small><a class="nav-link w3-text-light-blue" href="{{ SITEURL }}/archives.html">archives</a></small>
-            </p>
+            <ul class="navbar-nav">
+                <li class="nav-item float-right">
+                    <a class="nav-link" href="{{ SITEURL }}/archives.html">archives</a>
+                </li>
+            </ul>
         </div>
 	</nav>
 
 	<div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <div class="card card-body card-sidebar">
+                <div class="card card-body card-bg">
                     <h3 class="card-title">Blogroll</h3>
                     <hr/>
-                    <ul class="card-text">
+                    <ul>
                         {% for name, link in LINKS %}
                             <li><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
@@ -94,10 +98,10 @@
                 </div>
                 <br/>
 
-                <div class="card card-body card-sidebar">
-                    <h3 class="card-title">Social</h3>
+                <div class="card card-body card-bg">
+                    <h3>Social</h3>
                     <hr/>
-                    <ul class="card-text">
+                    <ul>
                         {% for name, link in SOCIAL %}
                             <li class="social"><a href="{{ link }}">{{ name }}</a></li>
                         {% endfor %}
@@ -106,10 +110,10 @@
                 <br/>
 
                 {% if authors and authors|length > 0 %}
-                <div class="card card-body card-sidebar">
-                    <h3 class="card-title">Authors</h3>
+                <div class="card card-body card-bg">
+                    <h3>Authors</h3>
                     <hr/>
-                    <ul class="card-text">
+                    <ul>
                         {% for author, articles in authors %}
                             <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></li>
                         {% endfor %}
@@ -119,10 +123,10 @@
                 {% endif %}
 
                 {% if categories and categories|length > 0 %}
-                <div class="card card-body card-sidebar">
-                    <h3 class="card-title">Categories</h3>
+                <div class="card card-body card-bg">
+                    <h3>Categories</h3>
                     <hr/>
-                    <ul class="card-text">
+                    <ul>
                         {% for category, articles in categories %}
                             <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
                         {% endfor %}
@@ -132,10 +136,10 @@
                 {% endif %}
 
                 {% if tags and tags|length > 0 %}
-                <div class="card card-body card-sidebar">
-                    <h3 class="card-title">Tags</h3>
+                <div class="card card-body card-bg">
+                    <h3>Tags</h3>
                     <hr/>
-                    <ul class="card-text">
+                    <ul>
                         {% for tag, articles in tags %}
                             <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
                         {% endfor %}
@@ -153,9 +157,9 @@
         </div>
 	</div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm w3-2017-navy-peony w3-text-light-blue">
-        <small class="navbar-text mr-auto">Powered by <a class="navbar-footer-link" href="http://getpelican.com/">Pelican</a>. Theme based on <a class="navbar-footer-link" href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a class="navbar-footer-link" href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
-        <small class="navbar-text w3-text-pale-blue" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue">
+        <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
+        <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
     </nav>
 
     <script>

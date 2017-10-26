@@ -1,7 +1,6 @@
 body {
     margin: 4px; overflow-y:visible;
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,monospace;
-    color:#223a5e;
 }
 
 .body-normal {
@@ -14,66 +13,8 @@ body {
     padding-bottom: 128px!important;
 }
 
-.navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(234, 242, 252, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-toggler-icon::after {
-    box-sizing: border-box;
-}
-
-.navbar-toggler-icon::before {
-    box-sizing: border-box;
-}
-
-.w3-text-pale-blue {
-    color: #EAF3FC !important;
-}
-
-a.navbar-brand.w3-text-pale-blue:hover {
-    color: #ffffff !important;
-}
-
-a.nav-link.w3-text-light-blue:hover {
-    color: #B6E3F7 !important;
-}
-
-.navbar-footer-link  {
-    color: #EAF3FC !important;
-}
-
-.navbar-footer-link:hover  {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-div.card.card-body.card-sidebar {
-    background-color: #223a5e!important;
-}
-
-div.card.card-body.card-sidebar h3 {
-    color: #87CEEB!important;
-}
-
-div.card.card-body.card-sidebar hr {
-    background-color: #87CEEB!important;
-}
-
-div.card.card-body.card-sidebar a {
-    color: #87CEEB!important;
-}
-
-div.card.card-body.card-sidebar ul {
-    margin-left:-24px;
-}
-
-div.card.card-body.card-sidebar a:hover {
-    color: #B6E3F7!important;
-    text-decoration: none;
-}
-
-.card-metadata {
-    background-color: #E0E6EC!important;
+.card-bg {
+    background-color:#CAD7EF4F;
     margin-bottom:8px;
 }
 
@@ -96,11 +37,9 @@ div.card.card-body.card-sidebar a:hover {
 }
 
 a.link-metadata {
-    color:#007bff;
 }
 
 a.link-metadata:hover {
-    color:#223a5e;
 }
 
 .page-header {
@@ -157,6 +96,12 @@ ul.archive-list {
 .btn-summary {
     margin: 8px 0 0 8px;
     display: inline;
+    background-color: #CAD7EFFF;
+    color:#0F0F5F9F;
+}
+
+.btn-summary:hover {
+    color:#0F0F5FFF;
 }
 
 div.highlight pre {
@@ -167,6 +112,43 @@ div.highlight pre {
 .pagination {
     margin-top: 24px;
     padding: 8px;
+}
+
+.bg-light-blue {
+    background-color: #CAD7EFFF;
+}
+
+.navbar-light-blue {
+    color:#14054F44;
+}
+
+.navbar-light-blue .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+}
+
+.navbar-light-blue .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(20, 05, 59, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light-blue .navbar-brand {
+    color:#06001D88;
+}
+
+.navbar-light-blue .navbar-brand:hover {
+    color:#06001DEE;
+}
+
+.navbar-light-blue .navbar-nav .nav-link {
+    color:#14054F88;
+}
+
+.navbar-light-blue .navbar-nav .nav-link:hover {
+    color:#14054FEE;
+}
+
+.navbar-light-blue .navbar-text {
+    color:#828282EE;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
