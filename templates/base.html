@@ -64,21 +64,24 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                {% for title, link in MENUITEMS %}
-					<li class="nav-item"><a class="nav-link"
-                                            href="{{ link }}">{{ title }}</a></li>
-				{% endfor %}
-				{% if DISPLAY_PAGES_ON_MENU %}
-					{% for page in pages %}
-						<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-					{% endfor %}
-				{% endif %}
+            {% if DISPLAY_PAGES_ON_MENU %}
+            <ul class="navbar-nav float-left mr-auto">
+				{% for page in pages %}
+                <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
             </ul>
+            {% endif %}
 
-            <ul class="navbar-nav">
-                <li class="nav-item float-right">
-                    <a class="nav-link" href="{{ SITEURL }}/archives.html">archives</a>
+            <ul class="navbar-nav float-right">
+                {% if MENUITEMS %}
+                    {% for title, link in MENUITEMS %}
+                        <li class="nav-item"><a class="nav-link"
+                                                href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                {% endif %}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ SITEURL }}/archives.html">Archives</a>
                 </li>
             </ul>
         </div>
