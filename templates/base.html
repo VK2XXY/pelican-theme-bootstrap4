@@ -186,10 +186,8 @@
         window.onresize = function() {
             if(window.innerWidth < 768) {
                     $('body').removeClass('body-normal').addClass('body-narrow');
-                    $('#index_content').find('p.page-header').removeClass('h1').addClass('h2');
             } else {
                     $('body').removeClass('body-narrow').addClass('body-normal');
-                    $('#index_content').find('p.page-header').removeClass('h2').addClass('h1');
             };
             window_resize();
         };

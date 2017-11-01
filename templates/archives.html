@@ -2,15 +2,7 @@
 {% block title %}Archive{% endblock %}
 
 {% block extra_scripts %}
-    function window_resize() {
-        if(window.innerWidth < 768) {
-                $('#index_content').find('li.year-text').removeClass('h2').addClass('h3');
-                $('#index_content').find('li.month-text').removeClass('h4').addClass('h5');
-        } else {
-                $('#index_content').find('li.year-text').removeClass('h3').addClass('h2');
-                $('#index_content').find('li.month-text').removeClass('h5').addClass('h4');
-        };
-    };
+
 {% endblock %}
 
 {% block content %}
@@ -18,10 +10,10 @@
 
 <ul class="archive-list">
 	{% for year, date_year in dates|groupby( 'date.year' ) %}
-	<li class="h2 year-text">{{ year }}
+    <li class="year-text"><h2>{{ year }}</h2>
 		<ul class="archive-list">
 			{% for month, articles in date_year|groupby( 'date.month' ) %}
-			<li class="h4 month-text">{{ articles[ 0 ].date.strftime( '%B' ) }}
+            <li class="month-text"><h2>{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
 				<ul class="archive-list">
 					{% for article in articles %}
 					<li class="archive-text">
