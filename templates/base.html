@@ -108,7 +108,7 @@
                     <br/>
 
                     <div class="card card-body card-bg">
-                        <h3>Social</h3>
+                        <h3>Social Media</h3>
                         <hr/>
                         <ul>
                             {% for name, link in SOCIAL %}
@@ -117,19 +117,6 @@
                         </ul>
                     </div>
                     <br/>
-
-                    {% if OTHER_LINKS %}
-                        <div class="card card-body card-bg">
-                            <h3 class="card-title">Other Links</h3>
-                            <hr/>
-                            <ul>
-                                {% for name, link in OTHER_LINKS %}
-                                    <li><a href="{{ link }}">{{ name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
-                    {% endif %}
 
                     {% if authors and authors|length > 0 %}
                     <div class="card card-body card-bg">
@@ -175,10 +162,10 @@
         </div>
 	</div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" aria-roledescription="">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" aria-label="Footer">
         <div class="container">
-            <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a></small>
-            <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+            <small class="navbar-text mr-auto" aria-label="Website Epilog">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a></small>
+            <small class="navbar-text" style="margin-left:8px;" aria-label="Website Author">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
 
