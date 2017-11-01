@@ -6,11 +6,9 @@
         if(window.innerWidth < 768) {
                 $('#index_content').find('li.year-text').removeClass('h2').addClass('h3');
                 $('#index_content').find('li.month-text').removeClass('h4').addClass('h5');
-                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-normal').addClass('card-metadata-text-small');
         } else {
                 $('#index_content').find('li.year-text').removeClass('h3').addClass('h2');
                 $('#index_content').find('li.month-text').removeClass('h5').addClass('h4');
-                $('#index_content').find('div.card-metadata').removeClass('card-metadata-text-small').addClass('card-metadata-text-normal');
         };
     };
 {% endblock %}

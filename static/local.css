@@ -1,39 +1,22 @@
 body {
     margin: 4px; overflow-y:visible;
     font-family:"Helvetica Neue",Helvetica,Arial,sans-serif,monospace;
+    font-size: 0.9rem !important;
 }
 
 .body-normal {
-    padding-top: 80px !important;
-    padding-bottom: 96px!important;
+    padding-top: 76px !important;
+    padding-bottom: 76px!important;
 }
 
 .body-narrow {
-    padding-top: 96px !important;
-    padding-bottom: 128px!important;
+    padding-top: 76px !important;
+    padding-bottom: 96px!important;
 }
 
 .card-bg {
     background-color:#CAD7EF4F;
     margin-bottom:8px;
-}
-
-.card-metadata-text-normal {
-    font-size:1.0rem;
-    padding: 0.75rem !important;
-}
-
-.card-metadata-text-small {
-    font-size:0.88rem;
-    padding: 0.4rem !important;
-}
-
-.summary-text-normal {
-    font-size:1.0rem;
-}
-
-.summary-text-small {
-    font-size:0.88rem;
 }
 
 a.link-metadata {

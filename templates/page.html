@@ -2,13 +2,7 @@
 {% block title %} {{ page.title }} {% endblock %}
 
 {% block extra_scripts %}
-	function window_resize() {
-        if(window.innerWidth < 768) {
-            $('#index_content').find('div.page-content').addClass('small');
-        } else {
-			$('#index_content').find('div.page-content').removeClass('small');
-        };
-    };
+
 {% endblock %}
 
 {% block content %}

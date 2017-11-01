@@ -9,20 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Styles -->
-	<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">-->
-    <!--<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2017.css">-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/bootstrap.min.css">
 	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
 	<link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
     {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
-	<!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="{{ SITEURL }}/theme/jquery.min.js"></script>
+	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
+	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
     <script>
         function window_resize() {};
         {% block extra_scripts %} {% endblock %}
@@ -53,6 +48,7 @@
 	{% include "facebook.html" %}
 	{% include "github.html" %}
 	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue">
+        <div class="container">
         <a class="navbar-brand" href="{{ SITEURL }}/">
             <img src="/images/sitebrand.png" width="30" height="30" alt="SiteBrand">
         </a>
@@ -85,84 +81,105 @@
                 </li>
             </ul>
         </div>
+        </div>
 	</nav>
 
-	<div class="container-fluid">
+	<div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <div class="card card-body card-bg">
-                    <h3 class="card-title">Blogroll</h3>
-                    <hr/>
-                    <ul>
-                        {% for name, link in LINKS %}
-                            <li><a href="{{ link }}">{{ name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <br/>
 
-                <div class="card card-body card-bg">
-                    <h3>Social</h3>
-                    <hr/>
-                    <ul>
-                        {% for name, link in SOCIAL %}
-                            <li class="social"><a href="{{ link }}">{{ name }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <br/>
-
-                {% if authors and authors|length > 0 %}
-                <div class="card card-body card-bg">
-                    <h3>Authors</h3>
-                    <hr/>
-                    <ul>
-                        {% for author, articles in authors %}
-                            <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <br/>
-                {% endif %}
-
-                {% if categories and categories|length > 0 %}
-                <div class="card card-body card-bg">
-                    <h3>Categories</h3>
-                    <hr/>
-                    <ul>
-                        {% for category, articles in categories %}
-                            <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <br/>
-                {% endif %}
-
-                {% if tags and tags|length > 0 %}
-                <div class="card card-body card-bg">
-                    <h3>Tags</h3>
-                    <hr/>
-                    <ul>
-                        {% for tag, articles in tags %}
-                            <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <br/>
-                {% endif %}
-            </div>
-            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-auto">
-                <div id="index_content" class="container-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+                <div id="index_content" class="container-fluid" style="margin-bottom: 60px;">
                     {% block indextitle %}<p class="h1 page-header">{% block title %} {{ self.windowtitle() }} {% endblock %}</p>{% endblock %}
                     {% block content %}{% endblock %}
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
+                <div id="sidebar_content" class="container-fluid">
+                    <div class="card card-body card-bg">
+                        <h3 class="card-title">Blogroll</h3>
+                        <hr/>
+                        <ul>
+                            {% for name, link in LINKS %}
+                                <li><a href="{{ link }}">{{ name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <br/>
+
+                    <div class="card card-body card-bg">
+                        <h3>Social</h3>
+                        <hr/>
+                        <ul>
+                            {% for name, link in SOCIAL %}
+                                <li class="social"><a href="{{ link }}">{{ name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <br/>
+
+                    {% if OTHER_LINKS %}
+                        <div class="card card-body card-bg">
+                            <h3 class="card-title">Other Links</h3>
+                            <hr/>
+                            <ul>
+                                {% for name, link in OTHER_LINKS %}
+                                    <li><a href="{{ link }}">{{ name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <br/>
+                    {% endif %}
+
+                    {% if authors and authors|length > 0 %}
+                    <div class="card card-body card-bg">
+                        <h3>Authors</h3>
+                        <hr/>
+                        <ul>
+                            {% for author, articles in authors %}
+                                <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <br/>
+                    {% endif %}
+
+                    {% if categories and categories|length > 0 %}
+                    <div class="card card-body card-bg">
+                        <h3>Categories</h3>
+                        <hr/>
+                        <ul>
+                            {% for category, articles in categories %}
+                                <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <br/>
+                    {% endif %}
+
+                    {% if tags and tags|length > 0 %}
+                    <div class="card card-body card-bg">
+                        <h3>Tags</h3>
+                        <hr/>
+                        <ul>
+                            {% for tag, articles in tags %}
+                                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <br/>
+                    {% endif %}
+                </div>
+            </div>
+
         </div>
 	</div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue">
-        <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
-        <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+        <div class="container">
+            <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
+            <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+        </div>
     </nav>
 
     <script>
