@@ -47,10 +47,10 @@
 <body class="body-normal">
 	{% include "facebook.html" %}
 	{% include "github.html" %}
-	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue">
+	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
-        <a class="navbar-brand" href="{{ SITEURL }}/">
-            <img src="/images/sitebrand.png" width="30" height="30" alt="Logo or Brand for website, link to home page">
+        <a class="navbar-brand" href="{{ SITEURL }}/" aria-label="Link to home page">
+            <img src="/images/sitebrand.png" width="30" height="30" alt="Website Brand">
         </a>
         <button type="button" class="navbar-toggler"
                 data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -63,7 +63,7 @@
             {% if DISPLAY_PAGES_ON_MENU %}
             <ul class="navbar-nav float-left mr-auto">
 				{% for page in pages %}
-                <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+                <li class="nav-item" aria-label="Top navbar item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
                 {% endfor %}
             </ul>
             {% endif %}
@@ -71,31 +71,31 @@
             <ul class="navbar-nav float-right">
                 {% if MENUITEMS %}
                     {% for title, link in MENUITEMS %}
-                        <li class="nav-item"><a class="nav-link"
+                        <li class="nav-item" aria-label="Top navbar item"><a class="nav-link"
                                                 href="{{ link }}">{{ title }}</a></li>
                     {% endfor %}
                 {% endif %}
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ SITEURL }}/archives.html">Archives</a>
+                    <a class="nav-link" aria-label="Top navbar item" href="{{ SITEURL }}/archives.html">Archives</a>
                 </li>
             </ul>
         </div>
         </div>
 	</nav>
 
-	<div class="container">
+	<div class="container" role="main">
         <div class="row">
 
             <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                <div id="index_content" class="container-fluid" style="margin-bottom: 60px;">
+                <div id="index_content" class="container-fluid" style="margin-bottom: 60px;" aria-label="Content section">
                     {% block indextitle %}<h1 class="page-header">{% block title %} {{ self.windowtitle() }} {% endblock %}</h1>{% endblock %}
                     {% block content %}{% endblock %}
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
-                <div id="sidebar_content" class="container-fluid">
+                <div id="sidebar_content" class="container-fluid" aria-label="Sidebar section">
                     <div class="card card-body card-bg">
                         <h3 class="card-title">Blogroll</h3>
                         <hr/>
@@ -175,9 +175,9 @@
         </div>
 	</div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" aria-roledescription="">
         <div class="container">
-            <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a>, and <a href="https://www.w3schools.com/w3css/default.asp">W3</a></small>
+            <small class="navbar-text mr-auto">Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://getbootstrap.com/">Bootstrap 4.0</a></small>
             <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
