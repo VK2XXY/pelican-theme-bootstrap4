@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>{% block windowtitle %}{{ SITENAME }}{% endblock %}</title>
-	<meta name="description" content="">
+	<meta name="description" content="{{ SITE_DESCRIPTION }}">
 	<meta name="author" content="{{ AUTHOR }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -74,13 +74,13 @@
             <ul class="navbar-nav float-right">
                 {% if MENUITEMS %}
                     {% for title, link in MENUITEMS %}
-                        <li class="nav-item" aria-label="Top navbar item"><a class="nav-link"
+                        <li class="nav-item" aria-label="Top navbar item {{ title }}"><a class="nav-link"
                                                 href="{{ link }}" tabindex="3">{{ title }}</a></li>
                     {% endfor %}
                 {% endif %}
 
                 <li class="nav-item">
-                    <a class="nav-link" aria-label="Top navbar item" href="{{ SITEURL }}/archives.html"
+                    <a class="nav-link" aria-label="Top navbar item archives" href="{{ SITEURL }}/archives.html"
                         tabindex="10">Archives</a>
                 </li>
             </ul>
