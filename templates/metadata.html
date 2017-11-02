@@ -1,9 +1,10 @@
-<div class="container-fluid">
-    Permalink: <a href="{{ SITEURL }}/{{ article.url }}" aria-label="view full article">{{ article.date }}</a>
+<div class="container-fluid" tabindex="900">
+    Permalink: <a href="{{ SITEURL }}/{{ article.url }}" aria-label="view full article" tabindex="900">{{ article.date }}</a>
 
-    {% if SHOW_AUTHORS and article.author %}by <a href="{{ SITEURL }}/{{ article.author.url }}" aria-label="view other articles by this author">
+    {% if SHOW_AUTHORS and article.author %}
+        by <a href="{{ SITEURL }}/{{ article.author.url }}" aria-label="view other articles by this author" tabindex="900">
             {{ article.author }}
         </a>
-    {% endif %} in <a href="{{ SITEURL }}/{{ article.category.url }}" aria-label="view articles sharing this category">{{ article.category }}</a>
-    {% if article.tags %}<div aria-label="view articles sharing these tags">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}{% endif %}</div>
+    {% endif %} in <a href="{{ SITEURL }}/{{ article.category.url }}" tabindex="900" aria-label="view articles sharing this category">{{ article.category }}</a>
+    {% if article.tags %}<div tabindex="900" aria-label="view articles sharing these tags">tags: {% for tag in article.tags %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> {% endfor %}{% endif %}</div>
 </div>
