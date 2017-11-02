@@ -10,15 +10,15 @@
 <div class='row'>
 	<div class="col">
 		<div class="card card-body card-metadata card-bg card-metadata-text-normal">{% include "metadata.html" %}</div>
-		<div class='article-content'>
+		<div class='article-content'  role="region" aria-roledescription="content of article">
 				{{ article.content }}
 		</div>
 		{% if DISQUS_SITENAME or FACEBOOK_APPID or TWITTER_USERNAME %}
-		<div class='article-comments'>
-			<p class="h2">Comments</p>
+		<div class='article-comments' role="region" aria-roledescription="comment section for article">
+			<p class="h2" tabindex="200">Comments</p>
 			{% include "twitter.html" %}
-			{% if DISQUS_SITENAME %}<div id="disqus_thread"></div>{% endif %}
-			{% if FACEBOOK_APPID %}<div class="fb-comments" data-href="{{ FQ_SITEURL }}/{{ article.url }}" data-num-posts="10" data-width="760"></div>{% endif %}
+			{% if DISQUS_SITENAME %}<div id="disqus_thread" tabindex="200" aria-label="disqus comments"></div>{% endif %}
+			{% if FACEBOOK_APPID %}<div class="fb-comments" tabindex="200" aria-label="facebook comments" data-href="{{ FQ_SITEURL }}/{{ article.url }}" data-num-posts="10" data-width="760"></div>{% endif %}
 		</div>
 		{% endif %}
 	</div>
