@@ -14,19 +14,22 @@
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <div class='row'>
     <div class="col">
-        <h2 class="article-header"> {{ article.title }} </h2>
+        <h2 id="{{ article.title }}_id" class="article-header"
+            aria-label="article heading"> {{ article.title }} </h2>
     </div>
 </div>
 <div class='row'>
     <div class="col-xs-12 col-sm-12">
-        <div class="card card-body card-metadata card-bg"> {% include "metadata.html" %} </div>
+        <div class="card card-body card-metadata card-bg"
+             aria-roledescription="metadata for article"
+             aria-labelledby="{{ article.title }}_id"> {% include "metadata.html" %} </div>
     </div>
 </div>
 <div class='row'>
     <div class="col">
-        <p class="summary summary-text-normal">{{ article.summary }}
+        <p class="summary" aria-labelledby="{{ article.title }}_id">{{ article.summary }}
         </p>
-        <a class="btn btn-sm btn-summary"
+        <a class="btn btn-sm btn-summary" aria-label="view full article"
                       href="{{ SITEURL }}/{{ article.url }}">read more…</a>
 
     </div>

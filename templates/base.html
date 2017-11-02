@@ -118,7 +118,7 @@
                     </div>
                     <br/>
 
-                    {% if authors and authors|length > 0 %}
+                    {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
                     <div class="card card-body card-bg">
                         <h3>Authors</h3>
                         <hr/>
@@ -131,7 +131,7 @@
                     <br/>
                     {% endif %}
 
-                    {% if categories and categories|length > 0 %}
+                    {% if SHOW_CATEGORIES_SIDEBAR and categories and categories|length > 0 %}
                     <div class="card card-body card-bg">
                         <h3>Categories</h3>
                         <hr/>
@@ -144,7 +144,7 @@
                     <br/>
                     {% endif %}
 
-                    {% if tags and tags|length > 0 %}
+                    {% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
                     <div class="card card-body card-bg">
                         <h3>Tags</h3>
                         <hr/>

@@ -8,17 +8,18 @@
 {% block content %}
 <hr/>
 
-<ul class="archive-list">
+<ul class="archive-list" aria-roledescription="list of archived articles">
 	{% for year, date_year in dates|groupby( 'date.year' ) %}
-    <li class="year-text"><h2>{{ year }}</h2>
+    <li class="year-text" aria-label="year of article"><h2>{{ year }}</h2>
 		<ul class="archive-list">
 			{% for month, articles in date_year|groupby( 'date.month' ) %}
-            <li class="month-text"><h2>{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
+            <li class="month-text" aria-label="month of article"><h2>{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
 				<ul class="archive-list">
 					{% for article in articles %}
 					<li class="archive-text">
-                        <div class="card card-body card-metadata card-bg card-metadata-text-normal">
-                            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+                        <div class="card card-body card-metadata card-bg">
+                            <a href="{{ SITEURL }}/{{ article.url }}"
+                               aria-label="view full article">{{ article.title }}</a>
                         </div>
 					</li>
 					{% endfor %}
