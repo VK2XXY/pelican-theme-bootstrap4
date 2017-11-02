@@ -8,7 +8,7 @@
 {% block content %}
 <hr/>
 
-<ul class="archive-list" role="tree" aria-roledescription="list of archived articles">
+<ul class="archive-list" aria-label="list of archived articles">
 	{% for year, date_year in dates|groupby( 'date.year' ) %}
     <li class="year-text"><h2 tabindex="21">{{ year }}</h2>
 		<ul class="archive-list">
@@ -18,7 +18,7 @@
 					{% for article in articles %}
 					<li class="archive-text">
                         <div class="card card-body card-metadata card-bg">
-                            <a href="{{ SITEURL }}/{{ article.url }}" role="treeitem" tabindex="21"
+                            <a href="{{ SITEURL }}/{{ article.url }}" tabindex="21"
                                aria-label="view full article">{{ article.title }}</a>
                         </div>
 					</li>
