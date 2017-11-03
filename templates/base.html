@@ -166,14 +166,13 @@
         </div>
 	</div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" aria-label="Footer">
+    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
-            <small class="navbar-text mr-auto" aria-label="Website Epilog"
-                   tabindex="200">Powered by <a
-                        href="http://getpelican.com/" tabindex="201">Pelican</a>. Theme based on <a
-                        href="http://getbootstrap.com/" tabindex="202">Bootstrap 4.0</a>
+            <small class="navbar-text mr-auto">Powered by <a
+                        href="http://getpelican.com/" aria-label="Tool used to create this website" tabindex="201">Pelican</a>. Theme based on <a
+                        href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website" tabindex="202">Bootstrap 4.0</a>
             </small>
-            <small class="navbar-text" style="margin-left:8px;" aria-label="Website Author">&copy; {{ AUTHOR }}</small>
+            <small class="navbar-text" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
 
