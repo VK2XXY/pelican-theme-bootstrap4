@@ -10,11 +10,11 @@
 <div class='row'>
 	<div class="col">
 		<div class="card card-body card-metadata card-bg">{% include "metadata.html" %}</div>
-		<div class='article-content'  role="region" aria-roledescription="content of article">
+		<div class='article-content'  role="region">
 				{{ article.content }}
 		</div>
 		{% if DISQUS_SITENAME or FACEBOOK_APPID or TWITTER_USERNAME %}
-		<div class='article-comments' role="region" aria-roledescription="comment section for article">
+		<div class='article-comments' role="region">
 			<p class="h2" tabindex="200">Comments</p>
 			{% include "twitter.html" %}
 			{% if DISQUS_SITENAME %}<div id="disqus_thread" tabindex="200" aria-label="disqus comments"></div>{% endif %}
