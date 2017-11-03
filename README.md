@@ -13,6 +13,7 @@ This is based on the [Bootstrap theme](https://github.com/pelican-themes/bootstr
 - *no categories, authors or tags pages used, no such pages listed in top navigation menu*
 - *Replaced home link in top navigation menu with image link to home page.*
 - *added arias for accesibility and screen readers.*
+- *added social icons for links referring meetup.com, anaconda.org and instagram.com. Updated reference for del.icio.us*
 
 
 ## features ##
