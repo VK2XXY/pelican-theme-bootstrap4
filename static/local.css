@@ -1,0 +1,147 @@
+body {
+    margin: 4px; overflow-y:visible;
+    font-family:Helvetica,Arial,sans-serif,monospace;
+}
+
+.body-normal {
+    padding-top: 76px !important;
+    padding-bottom: 76px!important;
+}
+
+.body-narrow {
+    padding-top: 76px !important;
+    padding-bottom: 96px!important;
+}
+
+.card-bg {
+    background-color:#CAD7EF4F;
+    margin-bottom:8px;
+}
+
+a.link-metadata {
+}
+
+a.link-metadata:hover {
+}
+
+.page-header {
+    margin: auto;
+}
+
+.page-content {
+    margin: 16px 4px 16px 4px;
+}
+
+.article-content {
+    margin: 32px 4px 16px 4px;
+}
+
+.article-header {
+    padding: 0 0 12px 8px;
+    margin: 32px 0 0 0;
+}
+
+ul.archive-list {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.year-text {
+    padding: 24px 0 0 0;
+}
+
+.month-text {
+    padding: 24px 0 0 0;
+}
+
+.archive-text {
+    padding: 24px 0 0 0;
+}
+
+.archive-text:last-child {
+    padding: 24px 0 12px 0;
+}
+
+.summary {
+    padding: 12px 8px 16px 8px;
+    display: inline;
+}
+
+.btn-summary {
+    margin: 8px 0 0 8px;
+    display: inline;
+    background-color: #CAD7EFFF;
+    color:#0F0F5F9F;
+}
+
+.btn-summary:hover {
+    color:#0F0F5FFF;
+}
+
+div.highlight pre {
+  background-color: #fefbf3;
+  margin: 0 0 10px;
+}
+
+.pagination {
+    margin-top: 24px;
+    padding: 8px;
+}
+
+.bg-light-blue {
+    background-color: #CAD7EFFF;
+}
+
+.navbar-light-blue {
+    color:#14054F44;
+}
+
+.navbar-light-blue .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+}
+
+.navbar-light-blue .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(20, 05, 59, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-light-blue .navbar-brand {
+    color:#06001D88;
+}
+
+.navbar-light-blue .navbar-brand:hover {
+    color:#06001DEE;
+}
+
+.navbar-light-blue .navbar-nav .nav-link {
+    color:#14054F88;
+}
+
+.navbar-light-blue .navbar-nav .nav-link:hover {
+    color:#14054FEE;
+}
+
+.navbar-light-blue .navbar-text {
+    color:#828282EE;
+}
+
+.social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='bitbucket.org']:before {content: url('./images/icons/bitbucket.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='code.google.com']:before {content: url('./images/icons/phosting.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='del.icio.us']:before {content: url('./images/icons/delicious.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='digg.com']:before {content: url('./images/icons/digg.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='facebook.com']:before {content: url('./images/icons/facebook.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='github.com']:before {content: url('./images/icons/github.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='google.com/reader']:before {content: url('./images/icons/reader.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='jamendo.com']:before {content: url('./images/icons/jamendo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='last.fm']:before, .social a[href*='lastfm.']:before {content: url('./images/icons/lastfm.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='linkedin.com']:before {content: url('./images/icons/linkedin.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='rss.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='stackoverflow.com']:before {content: url('./images/icons/stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='careers.stackoverflow.com']:before {content: url('./images/icons/careers.stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='twitter.com']:before {content: url('./images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='weibo.com']:before {content: url('./images/icons/weibo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='meetup.com']:before {content: url('./images/icons/meetup.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='instagram.com']:before {content: url('./images/icons/instagram.png'); margin-right: 2px; vertical-align: -3px;}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} {{ page.title }} {% endblock %}
+
+{% block extra_scripts %}
+
+{% endblock %}
+
+{% block content %}
+	<hr/>
+	<div class='row'>
+    	<div class="col">
+			<div class='page-content' role="region">
+					{{ page.content }}
+			</div>
+		</div>
+	</div>
+{% endblock %}
