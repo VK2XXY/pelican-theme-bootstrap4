@@ -15,6 +15,7 @@
     {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
+    {% include "analytics.html" %}
     <script src="{{ SITEURL }}/theme/jquery.min.js"></script>
 	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
 	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
@@ -163,10 +164,6 @@
 
         </div>
 	</div>
-
-    <div class="container-fluid" role="region">
-    {% include "analytics.html" %}
-    </div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
