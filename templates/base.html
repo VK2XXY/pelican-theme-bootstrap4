@@ -41,11 +41,9 @@
         <link href="{{ FEED_RSS }}" rel="alternate" title="{{ SITENAME }}" type="application/rss+xml">
 	{% endif %}
 
-	{% include "analytics.html" %}
-	{% include "disqus.html" %}
-</head>
+    </head>
 <body class="body-normal">
-	{% include "facebook.html" %}
+
 	{% include "github.html" %}
 	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
@@ -166,6 +164,10 @@
         </div>
 	</div>
 
+    <div class="container-fluid" role="region">
+    {% include "analytics.html" %}
+    </div>
+
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
             <small class="navbar-text mr-auto">Powered by <a
@@ -179,9 +181,9 @@
     <script>
         window.onresize = function() {
             if(window.innerWidth < 768) {
-                    $('body').removeClass('body-normal').addClass('body-narrow');
+                $('body').removeClass('body-normal').addClass('body-narrow');
             } else {
-                    $('body').removeClass('body-narrow').addClass('body-normal');
+                $('body').removeClass('body-narrow').addClass('body-normal');
             };
             window_resize();
         };
