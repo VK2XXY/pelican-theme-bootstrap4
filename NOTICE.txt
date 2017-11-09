@@ -1,2 +1,0 @@
-This work is derived mostly from the Bootstrap Pelican Theme, from https://github.com/getpelican/pelican-themes/tree/master/bootstrap
-It uses hosted JQuery, Bootstrap, W3 and JqueryUI libraries.
