@@ -15,25 +15,6 @@ body {
     display: block;
 }
 
-.img-github {
-    width:64;
-    height:64;
-}
-
-@media screen and (min-width: 768) {
-    .img-github {
-        width:128;
-        height:128;
-    }
-}
-
-@media screen and (max-width: 767) {
-    .img-github {
-        width:48;
-        height:48;
-    }
-}
-
 .card-bg {
     background-color:#EFF3FAFF;
     margin-bottom:8px;
