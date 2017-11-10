@@ -181,9 +181,9 @@
     <script>
         window.onresize = function() {
             if(window.innerWidth < 768) {
-                $('body').removeClass('body-normal').addClass('body-narrow');
+                $('.content-main').removeClass('content-bottom-normal').addClass('content-bottom-narrow');
             } else {
-                $('body').removeClass('body-narrow').addClass('body-normal');
+                $('.content-main').removeClass('content-bottom-narrow').addClass('content-bottom-normal');
             };
             window_resize();
         };
