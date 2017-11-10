@@ -3,16 +3,6 @@ body {
     font-family:Helvetica,Arial,sans-serif,monospace;
 }
 
-.body-normal {
-    padding-top: 76px !important;
-    padding-bottom: 76px!important;
-}
-
-.body-narrow {
-    padding-top: 76px !important;
-    padding-bottom: 96px!important;
-}
-
 .card-bg {
     background-color:#CAD7EF4F;
     margin-bottom:8px;
@@ -127,6 +117,9 @@ div.highlight pre {
 
 .content-main {
     background-color:#7777FFFF;
+    position: absolute;
+    left:0;
+    top:76px;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
