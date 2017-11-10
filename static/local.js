@@ -1,6 +1,6 @@
 var THEME = {};
 
-function window_resize() = {};
+function window_resize() {};
 
 THEME.window_resize = function() {
     if(window.innerWidth < 768) {
