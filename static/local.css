@@ -115,11 +115,11 @@ div.highlight pre {
     color:#828282EE;
 }
 
-.content-main {
-    background-color:#7777FFFF;
+main.content-main {
+    background-color:#FFFF66FF;
     position: absolute;
     left:0;
-    top:76px;
+    top:68px;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
