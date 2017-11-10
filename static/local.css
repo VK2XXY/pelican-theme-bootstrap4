@@ -9,7 +9,8 @@ body {
     border: 0;
     position:absolute;
     top:58px;
-    right:7px;
+    right:12px;
+    display: block;
 }
 
 .card-bg {
