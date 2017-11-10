@@ -15,19 +15,25 @@ body {
     display: block;
 }
 
-.img-github-normal {
-    width:128;
-    height:128;
+@media screen and (min-width: 768) {
+    .img-github {
+        width:128;
+        height:128;
+    }
 }
 
-  {
-    width:80;
-    height:80;
+@media screen and (max-width: 767) {
+    .img-github {
+        width:48;
+        height:48;
+    }
 }
 
-.img-github-xs {
-    width:48;
-    height:48;
+@media not screen {
+    .img-github {
+        width:0;
+        height:0;
+    }
 }
 
 .card-bg {

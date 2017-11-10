@@ -182,10 +182,8 @@
         window.onresize = function() {
             if(window.innerWidth < 768) {
                 $('.content-main').removeClass('content-bottom-normal').addClass('content-bottom-narrow');
-                $('.github').children('img').removeClass('img-github-normal').addclass('img-github-sm');
             } else {
                 $('.content-main').removeClass('content-bottom-narrow').addClass('content-bottom-normal');
-                $('.github').find('img').removeClass('img-github-sm').addclass('img-github-normal');
             };
             window_resize();
         };
