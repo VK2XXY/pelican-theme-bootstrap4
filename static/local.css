@@ -118,10 +118,10 @@ div.highlight pre {
 }
 
 main.content-main {
-    background-color:#FFFFFF99;
+    background-color:#FFFFFF00;
     position: absolute;
     left:0;
-    top:64px;
+    top:72px;
     width:100%;
     overflow-y:scroll;
     overflow-x:none;
