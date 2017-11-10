@@ -15,6 +15,11 @@ body {
     display: block;
 }
 
+.img-github {
+    width:64;
+    height:64;
+}
+
 @media screen and (min-width: 768) {
     .img-github {
         width:128;
@@ -26,13 +31,6 @@ body {
     .img-github {
         width:48;
         height:48;
-    }
-}
-
-@media not screen {
-    .img-github {
-        width:0;
-        height:0;
     }
 }
 
