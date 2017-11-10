@@ -16,7 +16,7 @@ body {
 }
 
 .card-bg {
-    background-color:#EFF3FAFF;
+    background-color:#EFF3FA;
     margin-bottom:8px;
 }
 
@@ -91,11 +91,11 @@ div.highlight pre {
 }
 
 .bg-light-blue {
-    background-color: #CAD7EFFF;
+    background-color: #CAD7EF;
 }
 
 .navbar-light-blue {
-    color:#14054F44;
+    color:#CAD7EF;
 }
 
 .navbar-light-blue .navbar-toggler {
@@ -108,30 +108,30 @@ div.highlight pre {
 }
 
 .navbar-light-blue .navbar-brand {
-    color:#06001D88;
+    color:#070720;
 }
 
 .navbar-light-blue .navbar-brand:hover {
-    color:#06001DEE;
+    color:#05001A;
 }
 
 .navbar-light-blue .navbar-nav .nav-link {
-    color:#14054F88;
+    color:#697CBF;
 }
 
 .navbar-light-blue .navbar-nav .nav-link:hover {
-    color:#14054FEE;
+    color:#150752;
 }
 
 .navbar-light-blue .navbar-text {
-    color:#828282EE;
+    color:#8788A2;
 }
 
 main.content-main {
     background-color:#FFFFFF00;
     position: absolute;
     left:0;
-    top:68px;
+    top:64px;
     width:100%;
     overflow-y:scroll;
     overflow-x:none;
@@ -139,7 +139,7 @@ main.content-main {
 }
 
 .content-bottom-normal {
-    bottom:70px;
+    bottom:56px;
 }
 
 .content-bottom-narrow {
