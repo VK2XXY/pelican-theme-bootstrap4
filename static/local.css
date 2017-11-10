@@ -10,7 +10,7 @@ body {
 }
 
 .card-bg {
-    background-color:#CAD7EFFF;
+    background-color:##EFF3FAFF;
     margin-bottom:8px;
 }
 
@@ -136,7 +136,7 @@ main.content-main {
 }
 
 .content-bottom-narrow {
-    bottom:92px;
+    bottom:90px;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
