@@ -13,7 +13,6 @@ body {
 .github img {
     border: 0;
     display: block;
-    z-index:1;
 }
 
 .card-bg {
@@ -136,6 +135,7 @@ main.content-main {
     width:100%;
     overflow-y:scroll;
     overflow-x:none;
+    z-index:-1;
 }
 
 .content-bottom-normal {
