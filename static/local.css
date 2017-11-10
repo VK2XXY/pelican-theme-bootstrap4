@@ -5,6 +5,10 @@ body {
     overflow-x:none;
 }
 
+.github {
+    border: 0;
+}
+
 .card-bg {
     background-color:#CAD7EF4F;
     margin-bottom:8px;
