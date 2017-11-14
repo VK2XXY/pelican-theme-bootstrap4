@@ -146,6 +146,14 @@ main.content-main {
     bottom:90px;
 }
 
+.card a img {
+    margin-bottom: 8px;
+}
+
+.card a img : last-child {
+    margin-bottom: 0px;
+}
+
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
