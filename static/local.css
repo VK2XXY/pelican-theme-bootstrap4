@@ -147,7 +147,7 @@ main.content-main {
 }
 
 .card a img {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .card a img : last-child {
