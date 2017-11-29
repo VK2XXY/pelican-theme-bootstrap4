@@ -6,7 +6,12 @@ This theme relies on Bootstrap 4 and Jquery libraries.
 
 ## changelog ##
 
-11/03/2016:
+11/29/2017:
+
+- *Check and Test against mock site, preparation for beta.*
+- *Test behaviour if new optional settings are missing.*
+
+11/03/2017:
 
 - *Updated to Bootstrap v4.0.0.beta.2.*
 - *Moved sidebar to right.*
