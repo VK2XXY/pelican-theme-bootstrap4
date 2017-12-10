@@ -69,14 +69,16 @@
             </ul>
             {% endif %}
 
+            {% if MENUITEMS %}
             <ul class="navbar-nav float-left">
-                {% if MENUITEMS %}
-                    {% for title, link in MENUITEMS %}
-                        <li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ title }}"
-                                                href="{{ link }}" tabindex="3">{{ title }}</a></li>
-                    {% endfor %}
-                {% endif %}
+                {% for title, link in MENUITEMS %}
+                <li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ title }}"
+                                        href="{{ link }}" tabindex="3">{{ title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
 
+            <ul class="navbar-nav float-right">
                 <li class="nav-item">
                     <a class="nav-link" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
                         tabindex="10">Archives</a>
