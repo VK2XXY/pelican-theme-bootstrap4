@@ -18,10 +18,11 @@
     <script src="{{ SITEURL }}/theme/jquery.min.js"></script>
 	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
 	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
+    <script src="{{ SITEURL }}/theme/local.js"></script>
+
 	<script>
-        function window_resize() {};
-        {% block extra_scripts %} {% endblock %}
-    </script>
+	{% block extra_scripts %} {% endblock %}
+	</script>
 
 	<!-- Feeds -->
 	{% if FEED_ALL_ATOM %}
@@ -272,14 +273,7 @@
     </nav>
 
     <script>
-        window.onresize = function() {
-            if(window.innerWidth < 768) {
-                $('body').removeClass('body-normal').addClass('body-narrow');
-            } else {
-                $('body').removeClass('body-narrow').addClass('body-normal');
-            };
-            window_resize();
-        };
+        window.onresize = THEME.window_resize;
         window.onresize();
     </script>
 
