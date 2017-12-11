@@ -79,6 +79,23 @@
             {% endif %}
 
             <ul class="navbar-nav float-right">
+                {% if SHOW_BLOGROLL_SUBMENU_IN_NAVBAR %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogroll"
+                       role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       tabindex="10">
+                        <small>Blogroll</small>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownBlogroll">
+                        {% for name, link in LINKS %}
+                        <a class="dropdown-item" tabindex="10"
+                           href="{{ link }}">
+                            {{ name }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
                 {% if SHOW_CATEGORIES_SUBMENU_IN_NAVBAR %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
