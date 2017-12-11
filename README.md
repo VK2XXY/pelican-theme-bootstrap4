@@ -6,6 +6,13 @@ This theme relies on Bootstrap 4 and Jquery libraries.
 
 ## changelog ##
 
+
+12/11/2017:
+
+- *Working when optional settings are missing.*
+- *New options to place category, tag, author and blogroll menus in navbar.*
+- *Social media now only icons on footer.*
+
 11/29/2017:
 
 - *Check and Test against mock site, preparation for beta.*
@@ -48,6 +55,15 @@ Your pelican settings file may use the following additional settings:
 
 `SHOW_TAGS_SIDEBAR = False`, Show a sidebar card listing links for tags.
 
+`SHOW_BLOGROLL_SIDEBAR = False`, Show a sidebar card listing links for the blogroll.
+
+`SHOW_AUTHORS_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of authors.
+
+`SHOW_TAGS_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of tags.
+
+`SHOW_CATEGORIES_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of categories.
+
+`SHOW_BLOGROLL_SUBMENU_IN_NAVBAR`, Show menu in top navbar containing the blogroll.
 
 ## Screenshot ##
 
