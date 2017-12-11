@@ -186,48 +186,69 @@
 				{% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
 					SHOW_TAGS_SIDEBAR %}
 				<div class="col-xs-12 col-sm-12 col-md-3">
-					<div id="sidebar_content" class="container-fluid" role="region">
+					<div id="sidebar_content" role="tablist">
 
 						{% if SHOW_BLOGROLL_SIDEBAR and LINKS|length > 0 %}
-						<div class="card card-body card-bg" role="navigation">
-							<h3 tabindex="5">Blogroll</h3>
-							<hr/>
-							<ul>
-								{% for name, link in LINKS %}
-								<li><a href="{{ link }}" tabindex="5">{{ name }}</a></li>
-								{% endfor %}
-							</ul>
+						<div class="card" role="navigation">
+                            <div class="card-header" role="tab" id="blogroll_heading">
+                                <h3 class="mb-0">
+                                    <a data-toggle="collapse" href="#blogroll_collapse"
+                                       aria-controls="blogroll_collapse" tabindex="5">Blogroll</a>
+                                </h3>
+                            </div>
+
+                            <div id="blogroll_collapse" class="collapse show" role="tabpanel"
+                                 aria-labelledby="blogroll_heading" data-parent="#sidebar_content">
+                                <div class="card-body">
+                                    {% for name, link in LINKS %}
+                                    <a href="{{ link }}" tabindex="5">{{ name }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
 						</div>
-						<br/>
 						{% endif %}
 
 						{% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
-						<div class="card card-body card-bg" role="navigation">
-							<h3 tabindex="7">Authors</h3>
-							<hr/>
-							<ul>
-								{% for author, articles in authors %}
-								<li><a href="{{ SITEURL }}/{{ author.url }}" tabindex="7">{{
-									author }}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-						<br/>
+                        <div class="card" role="navigation">
+                            <div class="card-header" role="tab" id="authors_heading">
+                                <h3 class="mb-0">
+                                    <a data-toggle="collapse" href="#authors_collapse"
+                                       aria-controls="authors_collapse" tabindex="5">Authors</a>
+                                </h3>
+                            </div>
+
+                            <div id="authors_collapse" class="collapse show" role="tabpanel"
+                                 aria-labelledby="authors_heading" data-parent="#sidebar_content">
+                                <div class="card-body">
+                                    {% for author, articles in authors %}
+                                    <a href="{{ SITEURL }}/{{ author.url }}"
+                                       tabindex="7">{{ author }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
 						{% endif %}
 
-						{% if SHOW_CATEGORIES_SIDEBAR and categories and categories|length > 0
-						%}
-						<div class="card card-body card-bg" role="navigation">
-							<h3 tabindex="8">Categories</h3>
-							<hr/>
-							<ul>
-								{% for category, articles in categories %}
-								<li><a href="{{ SITEURL }}/{{ category.url }}" tabindex="8">{{
-									category }}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-						<br/>
+						{% if SHOW_CATEGORIES_SIDEBAR and categories and
+                            categories|length > 0 %}
+                        <div class="card" role="navigation">
+                            <div class="card-header" role="tab" id="categories_heading">
+                                <h3 class="mb-0">
+                                    <a data-toggle="collapse" href="#categories_collapse"
+                                       aria-controls="categories_collapse" tabindex="5">Authors</a>
+                                </h3>
+                            </div>
+
+                            <div id="categories_collapse" class="collapse show" role="tabpanel"
+                                 aria-labelledby="categories_heading" data-parent="#sidebar_content">
+                                <div class="card-body">
+                                    {% for category, articles in categories %}
+                                    <a href="{{ SITEURL }}/{{ category.url }}"
+                                       tabindex="8">{{ category }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
 						{% endif %}
 
 						{% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
