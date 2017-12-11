@@ -1,10 +1,24 @@
 # bootstrap4 #
 
-This is based on the [Bootstrap theme](https://github.com/pelican-themes/bootstrap "Bootstrap"), by [getpelican](https://github.com/getpelican).
+This was inspired by the [Bootstrap theme](https://github.com/pelican-themes/bootstrap), by [getpelican](https://github.com/getpelican).
+
+This theme relies on Bootstrap 4 and Jquery libraries.
 
 ## changelog ##
 
-11/03/2016:
+
+12/11/2017:
+
+- *Working when optional settings are missing.*
+- *New options to place category, tag, author and blogroll menus in navbar.*
+- *Social media now only icons on footer.*
+
+11/29/2017:
+
+- *Check and Test against mock site, preparation for beta.*
+- *Test behaviour if new optional settings are missing.*
+
+11/03/2017:
 
 - *Updated to Bootstrap v4.0.0.beta.2.*
 - *Moved sidebar to right.*
@@ -12,7 +26,7 @@ This is based on the [Bootstrap theme](https://github.com/pelican-themes/bootstr
 - *Archives moved to top navigation menu, far right*
 - *no categories, authors or tags pages used, no such pages listed in top navigation menu*
 - *Replaced home link in top navigation menu with image link to home page.*
-- *added arias for accesibility and screen readers.*
+- *added arias for accessibility and screen readers.*
 - *added social icons for links referring meetup.com, anaconda.org and instagram.com. Updated reference for del.icio.us*
 
 
@@ -21,21 +35,19 @@ This is based on the [Bootstrap theme](https://github.com/pelican-themes/bootstr
 ### general ###
 
 - Where possible, the default behaviour of the bootstrap 4 theme has been followed.
-- Additionally the theme has been designed for accessibility for the visally impaired and for screen readers.
+- Additionally the theme should be reasonably accessible for the visually impaired and for screen readers.
 
 ### caveats ###
 
-This means the site may have difficulty being viewed on small or narrow screens.
+There may be difficulty viewing the site on small or narrow screens.
 
-### new settings ###
+### new optional settings ###
 
-Your pelican settings file will require the following additional settings:
+Your pelican settings file may use the following additional settings:
 
-`SITE_DESCRIPTION = 'description of the website'.`
+`SITE_DESCRIPTION = 'description of the website'`, for the description meta tag.
 
-`SHOW_AUTHORS = False`, Determines if the author, and an appropriate link, for each indexed article, is shown in the metadata. This only applies if the article in question has an author listed, in the head metadata.
-
-Additionally the following settings are optional:
+`SHOW_AUTHORS = False`, Determines if the author, and an appropriate link, for each indexed article, is shown in the metadata. This only applies if the article in question has an author.
 
 `SHOW_AUTHORS_SIDEBAR = False`, Show a sidebar card listing links for authors of articles. Note that if all articles only ever have one author, an Author sidebar will never be shown anyway.
 
@@ -43,8 +55,16 @@ Additionally the following settings are optional:
 
 `SHOW_TAGS_SIDEBAR = False`, Show a sidebar card listing links for tags.
 
+`SHOW_BLOGROLL_SIDEBAR = False`, Show a sidebar card listing links for the blogroll.
+
+`SHOW_AUTHORS_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of authors.
+
+`SHOW_TAGS_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of tags.
+
+`SHOW_CATEGORIES_SUBMENU_IN_NAVBAR`, Show menu in top navbar with list of categories.
+
+`SHOW_BLOGROLL_SUBMENU_IN_NAVBAR`, Show menu in top navbar containing the blogroll.
 
 ## Screenshot ##
 
-**screenshot to be updated. This is the one from pelican-themes/bootstrap**
 ![screenshot](screenshot.png)

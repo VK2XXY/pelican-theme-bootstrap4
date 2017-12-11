@@ -15,11 +15,13 @@
     {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
-    {% include "analytics.html" %}
     <script src="{{ SITEURL }}/theme/jquery.min.js"></script>
 	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
 	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
     <script src="{{ SITEURL }}/theme/local.js"></script>
+	<script>
+        {% block extra_scripts %} {% endblock %}
+    </script>
 
     {% block extra_scripts %} {% endblock %}
 
@@ -46,43 +48,109 @@
 	{% include "github.html" %}
 	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
-        <a class="navbar-brand" href="{{ SITEURL }}/" aria-label="Link to home page"
-        tabindex="1">
-            <img src="{{ SITEURL }}/images/sitebrand.png" width="32" height="32" alt="Website Brand">
-        </a>
-        <button type="button" class="navbar-toggler"
-                data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation"
-                tabindex="1">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+			<a class="navbar-brand" href="{{ SITEURL }}/" aria-label="Link to home page"
+			tabindex="1">
+				<img src="/images/sitebrand.png" width="30" height="30" alt="Website Brand">
+			</a>
+			<button type="button" class="navbar-toggler"
+					data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation"
+					tabindex="1">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            {% if DISPLAY_PAGES_ON_MENU %}
-            <ul class="navbar-nav float-left mr-auto">
-				{% for page in pages %}
-                <li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}"
-                    tabindex="2" aria-label="page, {{ page.title }}">{{ page.title }}</a></li>
-                {% endfor %}
-            </ul>
-            {% endif %}
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				{% if DISPLAY_PAGES_ON_MENU %}
+				<ul class="navbar-nav float-left mr-auto">
+					{% for page in pages %}
+					<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}"
+						tabindex="2" aria-label="page, {{ page.title }}">{{ page.title }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
 
-            <ul class="navbar-nav float-right">
-                {% if MENUITEMS %}
-                    {% for title, link in MENUITEMS %}
-                        <li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ page.title }}"
-                                                href="{{ link }}" tabindex="3">{{ title }}</a></li>
-                    {% endfor %}
-                {% endif %}
+				{% if MENUITEMS %}
+				<ul class="navbar-nav float-left mr-auto">
+					{% for title, link in MENUITEMS %}
+					<li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ title }}"
+											href="{{ link }}" tabindex="3">{{ title }}</a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
 
-                <li class="nav-item">
-                    <a class="nav-link" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
-                        tabindex="10">Archives</a>
-                </li>
-            </ul>
-        </div>
-        </div>
+				<ul class="navbar-nav float-right">
+					{% if SHOW_BLOGROLL_SUBMENU_IN_NAVBAR %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogroll"
+						   role="button"
+						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						   tabindex="10">
+							<small>Blogroll</small>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownBlogroll">
+							{% for name, link in LINKS %}
+							<a class="dropdown-item" tabindex="10"
+							   href="{{ link }}">
+								{{ name }}</a>
+							{% endfor %}
+						</div>
+					</li>
+					{% endif %}
+					{% if SHOW_CATEGORIES_SUBMENU_IN_NAVBAR %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
+						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						   tabindex="10">
+							<small>Categories</small>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+							{% for category, articles in categories %}
+							<a class="dropdown-item" tabindex="10"
+							   href="{{ SITEURL }}/{{ category.url }}">
+								{{ category }}</a>
+							{% endfor %}
+						</div>
+					</li>
+					{% endif %}
+					{% if SHOW_TAGS_SUBMENU_IN_NAVBAR %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button"
+						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						   tabindex="10">
+							<small>Tags</small>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownTags">
+							{% for tag, articles in tags %}
+							<a class="dropdown-item" tabindex="10"
+							   href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+							{% endfor %}
+						</div>
+					</li>
+					{% endif %}
+					{% if SHOW_AUTHORS_SUBMENU_IN_NAVBAR %}
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button"
+						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						   tabindex="10">
+							<small>Authors</small>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
+							{% for author, articles in authors %}
+							<a class="dropdown-item" tabindex="10"
+							   href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+							{% endfor %}
+						</div>
+					</li>
+					{% endif %}
+					<li class="nav-item">
+						<a class="nav-link" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
+							tabindex="10">
+							<small>Archives</small></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 
     <noscript>
@@ -98,82 +166,189 @@
 
         <div class="container">
             <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-1">
+				</div>
 
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                    <div id="index_content" class="container-fluid" style="margin-bottom: 60px;">
-                        {% block indextitle %}<h1 class="page-header" tabindex="20">{% block title %} {{ self.windowtitle() }} {% endblock %}</h1>{% endblock %}
-                        {% block content %}{% endblock %}
-                    </div>
-                </div>
+				{% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
+					SHOW_TAGS_SIDEBAR %}
+				<div class="col-xs-12 col-sm-12 col-md-8">
+				{% else %}
+				<div class="col-xs-12 col-sm-12 col-md-10">
+				{% endif %}
+					<div id="index_content" class="container-fluid"
+						 style="margin-bottom: 60px;">
+						{% block indextitle %}<h1 class="page-header" tabindex="20">{% block
+						title %} {{ self.windowtitle() }} {% endblock %}</h1>{% endblock %}
+						{% block content %}{% endblock %}
+					</div>
+				</div>
 
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4" >
-                    <div id="sidebar_content" class="container-fluid" role="region">
-                        <div class="card card-body card-bg" role="navigation">
-                            <h3 tabindex="5">Blogroll</h3>
-                            <hr/>
-                            <ul>
-                                {% for name, link in LINKS %}
-                                    <li><a href="{{ link }}" tabindex="5">{{ name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
+				{% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
+					SHOW_TAGS_SIDEBAR %}
+				<div class="col-xs-12 col-sm-12 col-md-3">
+					<div id="sidebar_content" class="container-fluid" role="region">
 
-                        <div class="card card-body card-bg" role="navigation">
-                            <h3 tabindex="6">Social Media</h3>
-                            <hr/>
-                            <ul>
-                                {% for name, link in SOCIAL %}
-                                    <li class="social"><a href="{{ link }}" tabindex="6">{{ name }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
+						{% if SHOW_BLOGROLL_SIDEBAR and LINKS|length > 0 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="5">Blogroll</h3>
+							<hr/>
+							<ul>
+								{% for name, link in LINKS %}
+								<li><a href="{{ link }}" tabindex="5">{{ name }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
 
-                        {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
-                        <div class="card card-body card-bg" role="navigation">
-                            <h3 tabindex="7">Authors</h3>
-                            <hr/>
-                            <ul>
-                                {% for author, articles in authors %}
-                                    <li><a href="{{ SITEURL }}/{{ author.url }}" tabindex="7">{{ author }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
-                        {% endif %}
+						{% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="7">Authors</h3>
+							<hr/>
+							<ul>
+								{% for author, articles in authors %}
+								<li><a href="{{ SITEURL }}/{{ author.url }}" tabindex="7">{{
+									author }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
 
-                        {% if SHOW_CATEGORIES_SIDEBAR and categories and categories|length > 0 %}
-                        <div class="card card-body card-bg" role="navigation">
-                            <h3 tabindex="8">Categories</h3>
-                            <hr/>
-                            <ul>
-                                {% for category, articles in categories %}
-                                    <li><a href="{{ SITEURL }}/{{ category.url }}" tabindex="8">{{ category }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
-                        {% endif %}
+						{% if SHOW_CATEGORIES_SIDEBAR and categories and categories|length > 0
+						%}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="8">Categories</h3>
+							<hr/>
+							<ul>
+								{% for category, articles in categories %}
+								<li><a href="{{ SITEURL }}/{{ category.url }}" tabindex="8">{{
+									category }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
 
-                        {% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
-                        <div class="card card-body card-bg" role="navigation">
-                            <h3 tabindex="9">Tags</h3>
-                            <hr/>
-                            <ul>
-                                {% for tag, articles in tags %}
-                                    <li><a href="{{ SITEURL }}/{{ tag.url }}" tabindex="9">{{ tag }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        </div>
-                        <br/>
-                        {% endif %}
-                    </div>
-                </div>
+						{% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="9">Tags</h3>
+							<hr/>
+							<ul>
+								{% for tag, articles in tags %}
+								<li><a href="{{ SITEURL }}/{{ tag.url }}" tabindex="9">{{ tag
+									}}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
+					</div>
+				</div>
+				{% else %}
+				<div class="col-xs-12 col-sm-12 col-md-1">
+				</div>
+				{% endif %}
 
             </div>
         </div>
     </main>
+
+    <main role="main" class="content-main content-bottom-normal">
+
+        <div class="container">
+            <div class="row">
+
+				<div class="col-xs-12 col-sm-12 col-md-1">
+				</div>
+
+				{% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
+					SHOW_TAGS_SIDEBAR %}
+				<div class="col-xs-12 col-sm-12 col-md-8">
+				{% else %}
+				<div class="col-xs-12 col-sm-12 col-md-10">
+				{% endif %}
+					<div id="index_content" class="container-fluid"
+						 style="margin-bottom: 60px;">
+						{% block indextitle %}<h1 class="page-header" tabindex="20">{% block
+						title %} {{ self.windowtitle() }} {% endblock %}</h1>{% endblock %}
+						{% block content %}{% endblock %}
+					</div>
+				</div>
+
+				{% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
+					SHOW_TAGS_SIDEBAR %}
+				<div class="col-xs-12 col-sm-12 col-md-3">
+					<div id="sidebar_content" class="container-fluid" role="region">
+
+						{% if SHOW_BLOGROLL_SIDEBAR and LINKS|length > 0 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="5">Blogroll</h3>
+							<hr/>
+							<ul>
+								{% for name, link in LINKS %}
+								<li><a href="{{ link }}" tabindex="5">{{ name }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
+
+						{% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="7">Authors</h3>
+							<hr/>
+							<ul>
+								{% for author, articles in authors %}
+								<li><a href="{{ SITEURL }}/{{ author.url }}" tabindex="7">{{
+									author }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
+
+						{% if SHOW_CATEGORIES_SIDEBAR and categories and categories|length > 0
+						%}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="8">Categories</h3>
+							<hr/>
+							<ul>
+								{% for category, articles in categories %}
+								<li><a href="{{ SITEURL }}/{{ category.url }}" tabindex="8">{{
+									category }}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
+
+						{% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
+						<div class="card card-body card-bg" role="navigation">
+							<h3 tabindex="9">Tags</h3>
+							<hr/>
+							<ul>
+								{% for tag, articles in tags %}
+								<li><a href="{{ SITEURL }}/{{ tag.url }}" tabindex="9">{{ tag
+									}}</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+						<br/>
+						{% endif %}
+					</div>
+				</div>
+				{% else %}
+				<div class="col-xs-12 col-sm-12 col-md-1">
+				</div>
+				{% endif %}
+			</div>
+        </div>
+    </main>
+	
+	<div class="container-fluid" role="region">
+    {% include "analytics.html" %}
+    </div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" role="navigation">
         <div class="container">
@@ -181,6 +356,11 @@
                         href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on <a
                         href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
             </small>
+			<ul class="navbar-nav mr-2">
+                {% for name, link in SOCIAL %}
+                <li class="social nav-item"><a href="{{ link }}" tabindex="6"></a></li>
+                {% endfor %}
+            </ul>
             <small class="navbar-text" tabindex="15" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
