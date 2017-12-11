@@ -147,6 +147,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-3">
                 <div id="sidebar_content" class="container-fluid" role="region">
+
                     <div class="card card-body card-bg" role="navigation">
                         <h3 tabindex="5">Blogroll</h3>
                         <hr/>
@@ -227,6 +228,11 @@
                         href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on <a
                         href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
             </small>
+            <ul class="navbar-nav">
+                {% for name, link in SOCIAL %}
+                <li class="social nav-item"><a href="{{ link }}" tabindex="6"></a></li>
+                {% endfor %}
+            </ul>
             <small class="navbar-text" tabindex="15" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
