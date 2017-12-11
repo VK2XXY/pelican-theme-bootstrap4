@@ -272,17 +272,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card card-body card-bg" role="navigation">
-							<h3 tabindex="9">Tags</h3>
-							<hr/>
-							<ul>
-								{% for tag, articles in tags %}
-								<li><a href="{{ SITEURL }}/{{ tag.url }}" tabindex="9">{{ tag
-									}}</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-						<br/>
 						{% endif %}
 					</div>
 				{% else %}
