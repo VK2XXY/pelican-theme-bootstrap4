@@ -73,7 +73,7 @@
             <ul class="navbar-nav float-left mr-auto">
                 {% for title, link in MENUITEMS %}
                 <li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ title }}"
-                                        href="{{ link }}" tabindex="3"><small>{{ title }}</small></a></li>
+                                        href="{{ link }}" tabindex="3">{{ title }}</a></li>
                 {% endfor %}
             </ul>
             {% endif %}
@@ -83,12 +83,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categories
+                        <small>Categories</small>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
                         {% for category, articles in categories %}
                         <a class="dropdown-item"
-                           href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+                           href="{{ SITEURL }}/{{ category.url }}">
+                            {{ category }}</a>
                         {% endfor %}
                     </div>
                 </li>
@@ -97,7 +98,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tags
+                        <small>Tags</small>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownTags">
                         {% for tag, articles in tags %}
@@ -111,7 +112,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Authors
+                        <small>Authors</small>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
                         {% for author, articles in authors %}
