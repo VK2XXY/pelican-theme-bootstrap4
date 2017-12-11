@@ -79,6 +79,48 @@
             {% endif %}
 
             <ul class="navbar-nav float-right">
+                {% if SHOW_CATEGORIES_SUBMENU_IN_NAVBAR %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+                        {% for category, articles in categories %}
+                        <a class="dropdown-item"
+                           href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
+                {% if SHOW_TAGS_SUBMENU_IN_NAVBAR %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tags
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownTags">
+                        {% for tag, articles in tags %}
+                        <a class="dropdown-item"
+                           href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
+                {% if SHOW_AUTHORS_SUBMENU_IN_NAVBAR %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Authors
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
+                        {% for author, articles in authors %}
+                        <a class="dropdown-item"
+                           href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
                 <li class="nav-item">
                     <a class="nav-link" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
                         tabindex="10">Archives</a>
