@@ -158,19 +158,7 @@
                         </ul>
                     </div>
                     <br/>
-
-                    <div class="card card-body card-bg" role="navigation">
-                        <h3 tabindex="6">Social Media</h3>
-                        <hr/>
-                        <ul>
-                            {% for name, link in SOCIAL %}
-                            <li class="social"><a href="{{ link }}" tabindex="6">{{ name
-                                }}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <br/>
-
+                    
                     {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
                     <div class="card card-body card-bg" role="navigation">
                         <h3 tabindex="7">Authors</h3>
