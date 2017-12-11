@@ -152,13 +152,17 @@
         </div>
 	</nav>
 
-	<div class="container-fluid" role="main">
+	<div class="container" role="main">
         <div class="row">
 
             <div class="col-xs-12 col-sm-12 col-md-1">
             </div>
 
+            {% if X %}
             <div class="col-xs-12 col-sm-12 col-md-8">
+            {% else %}
+            <div class="col-xs-12 col-sm-12 col-md-10">
+            {% endif %}
                 <div id="index_content" class="container-fluid"
                      style="margin-bottom: 60px;">
                     {% block indextitle %}<h1 class="page-header" tabindex="20">{% block
@@ -167,6 +171,8 @@
                 </div>
             </div>
 
+            {% if SHOW_BLOGROLL_SIDEBAR or SHOW_AUTHORS_SIDEBAR or SHOW_CATEGORIES_SIDEBAR or
+                SHOW_TAGS_SIDEBAR %}
             <div class="col-xs-12 col-sm-12 col-md-3">
                 <div id="sidebar_content" class="container-fluid" role="region">
 
@@ -227,6 +233,10 @@
                     {% endif %}
                 </div>
             </div>
+            {% else %}
+            <div class="col-xs-12 col-sm-12 col-md-1">
+            </div>
+            {% endif %}
         </div>
 	</div>
 
