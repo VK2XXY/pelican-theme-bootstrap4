@@ -1,5 +1,4 @@
 body {
-    margin: 4px; overflow-y:visible;
     font-family:Helvetica,Arial,sans-serif,monospace;
 	overflow-y:none;
     overflow-x:none;
@@ -28,30 +27,12 @@ body {
 
 .card-bg {
     background-color:#EFF3FA;
-    margin-bottom:8px;
 }
 
 a.link-metadata {
 }
 
 a.link-metadata:hover {
-}
-
-.page-header {
-    margin: auto;
-}
-
-.page-content {
-    margin: 16px 4px 16px 4px;
-}
-
-.article-content {
-    margin: 32px 4px 16px 4px;
-}
-
-.article-header {
-    padding: 0 0 12px 8px;
-    margin: 32px 0 0 0;
 }
 
 ul.archive-list {
@@ -81,7 +62,6 @@ ul.archive-list {
 }
 
 .btn-summary {
-    margin: 8px 0 0 8px;
     display: inline;
     background-color: #CAD7EFFF;
     color:#0F0F5F9F;

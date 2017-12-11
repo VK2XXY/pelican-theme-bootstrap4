@@ -42,7 +42,7 @@
 	{% endif %}
 
     </head>
-<body>
+<body class="m-3">
 
 	{% include "github.html" %}
 	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue" role="navigation">
@@ -177,7 +177,7 @@
 				{% endif %}
 					<div id="index_content" class="container-fluid"
 						 style="margin-bottom: 60px;">
-						{% block indextitle %}<h1 class="page-header" tabindex="20">{% block
+						{% block indextitle %}<h1 class="m-auto" tabindex="20">{% block
 						title %} {{ self.windowtitle() }} {% endblock %}</h1>{% endblock %}
 						{% block content %}{% endblock %}
 					</div>
@@ -193,12 +193,13 @@
                             <div class="card-header card-bg" role="tab" id="blogroll_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#blogroll_collapse"
+                                       aria-expanded="true"
                                        aria-controls="blogroll_collapse" tabindex="6">
                                         <small>Blogroll</small></a>
                                 </h3>
                             </div>
 
-                            <div id="blogroll_collapse" class="collapse hide" role="tabpanel"
+                            <div id="blogroll_collapse" class="collapse show" role="tabpanel"
                                  aria-labelledby="blogroll_heading" data-parent="#sidebar_content">
                                 <div class="card-body">
                                     {% for name, link in LINKS %}
@@ -214,6 +215,7 @@
                             <div class="card-header card-bg" role="tab" id="authors_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#authors_collapse"
+                                       aria-expanded="false"
                                        aria-controls="authors_collapse" tabindex="7">
                                         <small>Authors</small></a>
                                 </h3>
@@ -237,6 +239,7 @@
                             <div class="card-header card-bg" role="tab" id="categories_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#categories_collapse"
+                                       aria-expanded="false"
                                        aria-controls="categories_collapse"
                                        tabindex="8">
                                         <small>Categories</small></a>
@@ -260,6 +263,7 @@
                             <div class="card-header card-bg" role="tab" id="tags_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#tags_collapse"
+                                       aria-expanded="false"
                                        aria-controls="tags_collapse"
                                        tabindex="9">
                                         <small>Tags</small></a>
