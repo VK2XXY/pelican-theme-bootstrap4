@@ -158,7 +158,7 @@
                         </ul>
                     </div>
                     <br/>
-                    
+
                     {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
                     <div class="card card-body card-bg" role="navigation">
                         <h3 tabindex="7">Authors</h3>
@@ -216,7 +216,7 @@
                         href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on <a
                         href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
             </small>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-2">
                 {% for name, link in SOCIAL %}
                 <li class="social nav-item"><a href="{{ link }}" tabindex="6"></a></li>
                 {% endfor %}
