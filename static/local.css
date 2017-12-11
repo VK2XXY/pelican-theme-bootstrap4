@@ -169,18 +169,6 @@ main.content-main {
     flex-direction: row;
 }
 
-#sidebar_content div.card {
-
-}
-
-#sidebar_content div.card-body {
-    background-color:#EFF3FA;
-}
-
-#sidebar_content a:hover {
-    color:red;
-}
-
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
