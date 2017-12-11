@@ -125,6 +125,10 @@ div.highlight pre {
     color:#828282EE;
 }
 
+.navbar.fixed-bottom ul.navbar-nav {
+    flex-direction: row;
+}
+
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
