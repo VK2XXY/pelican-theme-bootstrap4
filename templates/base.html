@@ -19,6 +19,10 @@
 	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
 	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
     <script src="{{ SITEURL }}/theme/local.js"></script>
+	
+	<script>
+	{% block extra_scripts %} {% endblock %}
+	</script>
 
 	<!-- Feeds -->
 	{% if FEED_ALL_ATOM %}
