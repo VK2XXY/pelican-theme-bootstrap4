@@ -202,13 +202,9 @@
                             <div id="blogroll_collapse" class="collapse show" role="tabpanel"
                                  aria-labelledby="blogroll_heading" data-parent="#sidebar_content">
                                 <div class="card-body">
-                                    <ul class="archive-list">
-                                        {% for name, link in LINKS %}
-                                        <li class="card-text">
-                                            <a href="{{ link }}" tabindex="6">{{ name }}</a>
-                                        </li>
-                                        {% endfor %}
-                                    </ul>
+                                    {% for name, link in LINKS %}
+                                    <a href="{{ link }}" tabindex="6">{{ name }}</a>
+                                    {% endfor %}
                                 </div>
                             </div>
 						</div>
