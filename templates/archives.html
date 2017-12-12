@@ -10,13 +10,13 @@
 
 <ul class="archive-list" aria-label="list of archived articles">
 	{% for year, date_year in dates|groupby( 'date.year' ) %}
-    <li class="year-text"><h2 tabindex="21" aria-label="{{ year }}">{{ year }}</h2>
+    <li class="pt-4"><h2 tabindex="21" aria-label="{{ year }}">{{ year }}</h2>
 		<ul class="archive-list">
 			{% for month, articles in date_year|groupby( 'date.month' ) %}
-            <li class="month-text"><h2 tabindex="21" aria-label="{{ year }}, {{ articles[ 0 ].date.strftime( '%B' ) }}">{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
+            <li class="pt-4"><h2 tabindex="21" aria-label="{{ year }}, {{ articles[ 0 ].date.strftime( '%B' ) }}">{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
 				<ul class="archive-list">
 					{% for article in articles %}
-					<li class="archive-text">
+					<li class="archive-text pt-4">
                         <div class="card card-body card-metadata card-bg">
                             <a href="{{ SITEURL }}/{{ article.url }}" tabindex="21"
                                aria-label="{{ year }}, {{ articles[ 0 ].date.strftime( '%B' ) }}, {{ article.title }}">{{ article.title }}</a>

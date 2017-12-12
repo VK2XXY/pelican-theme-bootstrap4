@@ -40,20 +40,8 @@ ul.archive-list {
     list-style-position: outside;
 }
 
-.year-text {
-    padding: 24px 0 0 0;
-}
-
-.month-text {
-    padding: 24px 0 0 0;
-}
-
-.archive-text {
-    padding: 24px 0 0 0;
-}
-
 .archive-text:last-child {
-    padding: 24px 0 12px 0;
+    padding-bottom: 12px;
 }
 
 .summary {
