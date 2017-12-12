@@ -14,25 +14,8 @@ body {
     display: block;
 }
 
-.body-normal {
-    padding-top: 76px !important;
-    padding-bottom: 76px!important;
-}
-
-
-.body-narrow {
-    padding-top: 76px !important;
-    padding-bottom: 112px!important;
-}
-
 .card-bg {
     background-color:#EFF3FA;
-}
-
-a.link-metadata {
-}
-
-a.link-metadata:hover {
 }
 
 ul.archive-list {
