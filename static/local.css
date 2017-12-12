@@ -1,5 +1,4 @@
 body {
-    margin: 4px; overflow-y:visible;
     font-family:Helvetica,Arial,sans-serif,monospace;
 	overflow-y:none;
     overflow-x:none;
@@ -15,43 +14,8 @@ body {
     display: block;
 }
 
-.body-normal {
-    padding-top: 76px !important;
-    padding-bottom: 76px!important;
-}
-
-
-.body-narrow {
-    padding-top: 76px !important;
-    padding-bottom: 112px!important;
-}
-
 .card-bg {
     background-color:#EFF3FA;
-    margin-bottom:8px;
-}
-
-a.link-metadata {
-}
-
-a.link-metadata:hover {
-}
-
-.page-header {
-    margin: auto;
-}
-
-.page-content {
-    margin: 16px 4px 16px 4px;
-}
-
-.article-content {
-    margin: 32px 4px 16px 4px;
-}
-
-.article-header {
-    padding: 0 0 12px 8px;
-    margin: 32px 0 0 0;
 }
 
 ul.archive-list {
@@ -59,29 +23,11 @@ ul.archive-list {
     list-style-position: outside;
 }
 
-.year-text {
-    padding: 24px 0 0 0;
-}
-
-.month-text {
-    padding: 24px 0 0 0;
-}
-
-.archive-text {
-    padding: 24px 0 0 0;
-}
-
-.archive-text:last-child {
-    padding: 24px 0 12px 0;
-}
-
 .summary {
-    padding: 12px 8px 16px 8px;
     display: inline;
 }
 
 .btn-summary {
-    margin: 8px 0 0 8px;
     display: inline;
     background-color: #CAD7EFFF;
     color:#0F0F5F9F;
@@ -89,11 +35,6 @@ ul.archive-list {
 
 .btn-summary:hover {
     color:#0F0F5FFF;
-}
-
-div.highlight pre {
-  background-color: #fefbf3;
-  margin: 0 0 10px;
 }
 
 .pagination {
@@ -154,19 +95,29 @@ main.content-main {
 }
 
 .content-bottom-narrow {
-    bottom:90px;
-}
-
-.card a img {
-    margin-bottom: 16px;
-}
-
-.card a img : last-child {
-    margin-bottom: 0px;
+    bottom:128px;
 }
 
 .navbar.fixed-bottom ul.navbar-nav {
     flex-direction: row;
+}
+
+#sidebar_content .card-header a {
+    color: #697CBF;
+    text-decoration: none;
+}
+
+#sidebar_content .card-header a:hover {
+    color: #150752;
+}
+
+#sidebar_content .card-body a {
+    color: #697CBF;
+    text-decoration: none;
+}
+
+#sidebar_content .card-body a:hover {
+    color: #150752;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
