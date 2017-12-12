@@ -16,7 +16,11 @@
             <li class="pt-4"><h2 tabindex="21" aria-label="{{ year }}, {{ articles[ 0 ].date.strftime( '%B' ) }}">{{ articles[ 0 ].date.strftime( '%B' ) }}</h2>
 				<ul class="archive-list">
 					{% for article in articles %}
+					{% if article == articles|last %}
+					<li class="archive-text py-4">
+					{% else %}
 					<li class="archive-text pt-4">
+					{% endif %}
                         <div class="card card-body card-metadata card-bg">
                             <a href="{{ SITEURL }}/{{ article.url }}" tabindex="21"
                                aria-label="{{ year }}, {{ articles[ 0 ].date.strftime( '%B' ) }}, {{ article.title }}">{{ article.title }}</a>

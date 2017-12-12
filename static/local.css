@@ -23,10 +23,6 @@ ul.archive-list {
     list-style-position: outside;
 }
 
-.archive-text:last-child {
-    padding-bottom: 12px;
-}
-
 .summary {
     display: inline;
 }
