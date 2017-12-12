@@ -84,12 +84,12 @@
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogroll"
 						   role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-						   tabindex="10">
+						   tabindex="6">
 							<small>Blogroll</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownBlogroll">
 							{% for name, link in LINKS %}
-							<a class="dropdown-item" tabindex="10"
+							<a class="dropdown-item" tabindex="6"
 							   href="{{ link }}">
 								{{ name }}</a>
 							{% endfor %}
@@ -100,12 +100,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-						   tabindex="10">
+						   tabindex="7">
 							<small>Categories</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
 							{% for category, articles in categories %}
-							<a class="dropdown-item" tabindex="10"
+							<a class="dropdown-item" tabindex="7"
 							   href="{{ SITEURL }}/{{ category.url }}">
 								{{ category }}</a>
 							{% endfor %}
@@ -116,12 +116,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-						   tabindex="10">
+						   tabindex="8">
 							<small>Tags</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownTags">
 							{% for tag, articles in tags %}
-							<a class="dropdown-item" tabindex="10"
+							<a class="dropdown-item" tabindex="8"
 							   href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 							{% endfor %}
 						</div>
@@ -131,12 +131,12 @@
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-						   tabindex="10">
+						   tabindex="9">
 							<small>Authors</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
 							{% for author, articles in authors %}
-							<a class="dropdown-item" tabindex="10"
+							<a class="dropdown-item" tabindex="9"
 							   href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
 							{% endfor %}
 						</div>
@@ -194,6 +194,7 @@
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#blogroll_collapse"
                                        aria-expanded="true"
+                                       aria-label="Blogroll List"
                                        aria-controls="blogroll_collapse" tabindex="6">
                                         <small>Blogroll</small></a>
                                 </h3>
@@ -210,29 +211,6 @@
 						</div>
 						{% endif %}
 
-						{% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
-                        <div class="card" role="navigation">
-                            <div class="card-header card-bg" role="tab" id="authors_heading">
-                                <h3 class="mb-0">
-                                    <a data-toggle="collapse" href="#authors_collapse"
-                                       aria-expanded="false"
-                                       aria-controls="authors_collapse" tabindex="7">
-                                        <small>Authors</small></a>
-                                </h3>
-                            </div>
-
-                            <div id="authors_collapse" class="collapse hide" role="tabpanel"
-                                 aria-labelledby="authors_heading" data-parent="#sidebar_content">
-                                <div class="card-body">
-                                    {% for author, articles in authors %}
-                                    <a href="{{ SITEURL }}/{{ author.url }}"
-                                       tabindex="7">{{ author }}</a>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-						{% endif %}
-
 						{% if SHOW_CATEGORIES_SIDEBAR and categories and
                             categories|length > 0 %}
                         <div class="card" role="navigation">
@@ -241,7 +219,7 @@
                                     <a data-toggle="collapse" href="#categories_collapse"
                                        aria-expanded="false"
                                        aria-controls="categories_collapse"
-                                       tabindex="8">
+                                       tabindex="7">
                                         <small>Categories</small></a>
                                 </h3>
                             </div>
@@ -251,7 +229,7 @@
                                 <div class="card-body">
                                     {% for category, articles in categories %}
                                     <a href="{{ SITEURL }}/{{ category.url }}"
-                                       tabindex="8">{{ category }}</a>
+                                       tabindex="7">{{ category }}</a>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -265,7 +243,7 @@
                                     <a data-toggle="collapse" href="#tags_collapse"
                                        aria-expanded="false"
                                        aria-controls="tags_collapse"
-                                       tabindex="9">
+                                       tabindex="8">
                                         <small>Tags</small></a>
                                 </h3>
                             </div>
@@ -276,12 +254,36 @@
                                 <div class="card-body">
                                     {% for tag, articles in tags %}
                                     <a href="{{ SITEURL }}/{{ tag.url }}"
-                                       tabindex="9">{{ tag }}</a>
+                                       tabindex="8">{{ tag }}</a>
                                     {% endfor %}
                                 </div>
                             </div>
                         </div>
 						{% endif %}
+
+                        {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
+                        <div class="card" role="navigation">
+                            <div class="card-header card-bg" role="tab" id="authors_heading">
+                                <h3 class="mb-0">
+                                    <a data-toggle="collapse" href="#authors_collapse"
+                                       aria-expanded="false"
+                                       aria-controls="authors_collapse" tabindex="9">
+                                        <small>Authors</small>
+                                    </a>
+                                </h3>
+                            </div>
+
+                            <div id="authors_collapse" class="collapse hide" role="tabpanel"
+                                 aria-labelledby="authors_heading" data-parent="#sidebar_content">
+                                <div class="card-body">
+                                    {% for author, articles in authors %}
+                                    <a href="{{ SITEURL }}/{{ author.url }}"
+                                       tabindex="9">{{ author }}</a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
 					</div>
 				{% else %}
 				<div class="col-xs-12 col-sm-12 col-md-1">
@@ -303,10 +305,10 @@
             </small>
 			<ul class="navbar-nav mr-2">
                 {% for name, link in SOCIAL %}
-                <li class="social nav-item"><a href="{{ link }}" tabindex="6"></a></li>
+                <li class="social nav-item"><a href="{{ link }}" tabindex="203"></a></li>
                 {% endfor %}
             </ul>
-            <small class="navbar-text" tabindex="15" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+            <small class="navbar-text" tabindex="300" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
 
