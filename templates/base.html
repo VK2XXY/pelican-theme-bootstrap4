@@ -194,7 +194,7 @@
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#blogroll_collapse"
                                        aria-expanded="true"
-                                       aria-label="Blogroll List"
+                                       aria-label="Blogroll Sidebar"
                                        aria-controls="blogroll_collapse" tabindex="6">
                                         <small>Blogroll</small></a>
                                 </h3>
@@ -218,6 +218,7 @@
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#categories_collapse"
                                        aria-expanded="false"
+                                       aria-label="Categories Sidebar"
                                        aria-controls="categories_collapse"
                                        tabindex="7">
                                         <small>Categories</small></a>
@@ -242,6 +243,7 @@
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#tags_collapse"
                                        aria-expanded="false"
+                                       aria-label="Tags Sidebar"
                                        aria-controls="tags_collapse"
                                        tabindex="8">
                                         <small>Tags</small></a>
@@ -267,6 +269,7 @@
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#authors_collapse"
                                        aria-expanded="false"
+                                       aria-label="Authors Sidebar"
                                        aria-controls="authors_collapse" tabindex="9">
                                         <small>Authors</small>
                                     </a>
@@ -305,7 +308,7 @@
             </small>
 			<ul class="navbar-nav mr-2">
                 {% for name, link in SOCIAL %}
-                <li class="social nav-item"><a href="{{ link }}" tabindex="203"></a></li>
+                <li class="social nav-item"><a href="{{ link }}" aria-label="social media {{ name }}" tabindex="203"></a></li>
                 {% endfor %}
             </ul>
             <small class="navbar-text" tabindex="300" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
