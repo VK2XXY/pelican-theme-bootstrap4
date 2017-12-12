@@ -102,6 +102,24 @@ main.content-main {
     flex-direction: row;
 }
 
+#sidebar_content .card-header a {
+    color: #697CBF;
+    text-decoration: none;
+}
+
+#sidebar_content .card-header a:hover {
+    color: #150752;
+}
+
+#sidebar_content .card-bodyr a {
+    color: #697CBF;
+    text-decoration: none;
+}
+
+#sidebar_content .card-body a:hover {
+    color: #150752;
+}
+
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='anaconda.org']:before {content: url('./images/icons/anaconda.png'); margin-right: 2px; vertical-align: -3px;}
 .social a[href*='atom.xml']:before {content: url('./images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
