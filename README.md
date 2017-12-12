@@ -68,3 +68,5 @@ Your pelican settings file may use the following additional settings:
 ## Screenshot ##
 
 ![screenshot](screenshot.png)
+
+![screenshot 2](screenshot2.png)
