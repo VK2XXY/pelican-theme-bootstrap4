@@ -14,7 +14,7 @@
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <div class='row'>
     <div class="col-xs-12 col-sm-12">
-        <h2 id="{{ article.title }}_id" tabindex="21"
+        <h2 id="{{ article.title }}_id" tabindex="21" class="pt-4"
             aria-label="Article, {{ article.title }}"> {{ article.title }} </h2>
     </div>
 </div>
@@ -26,9 +26,9 @@
 </div>
 <div class='row'>
     <div class="col-xs-12 col-sm-12">
-        <p class="summary pb-4" tabindex="21">{{ article.summary }}
+        <p class="summary" tabindex="21">{{ article.summary }}
         </p>
-        <a class="btn btn-sm btn-summary mx-2" aria-label="article, {{ article.title }}"
+        <a class="btn btn-sm btn-summary mx-2 mb-4" aria-label="article, {{ article.title }}"
             tabindex="21" href="{{ SITEURL }}/{{ article.url }}">read more…</a>
 
     </div>
