@@ -13,22 +13,22 @@
 <hr/>
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <div class='row'>
-    <div class="col">
+    <div class="col-xs-12 col-sm-12">
         <h2 id="{{ article.title }}_id" class="my-3" tabindex="21"
             aria-label="Article, {{ article.title }}"> {{ article.title }} </h2>
     </div>
 </div>
 <div class='row'>
     <div class="col-xs-12 col-sm-12">
-        <div class="card card-body card-metadata card-bg">
+        <div class="card card-body card-metadata card-bg my-3">
             {% include "metadata.html" %} </div>
     </div>
 </div>
 <div class='row'>
-    <div class="col">
-        <p class="summary my-4" tabindex="21">{{ article.summary }}
+    <div class="col-xs-12 col-sm-12">
+        <p class="summary mb-5" tabindex="21">{{ article.summary }}
         </p>
-        <a class="btn btn-sm btn-summary m-3" aria-label="article, {{ article.title }}"
+        <a class="btn btn-sm btn-summary mx-2" aria-label="article, {{ article.title }}"
             tabindex="21" href="{{ SITEURL }}/{{ article.url }}">read more…</a>
 
     </div>
@@ -36,7 +36,7 @@
 {% endfor %}
 
 <div class='row'>
-    <div class="col">
+    <div class="col-xs-12 col-sm-12">
         {% if articles_page and articles_paginator.num_pages > 1 %}
         <nav class="justify-content-center" aria-label="Page Navigation">
             <ul class="justify-content-center p-3 mt-4">
