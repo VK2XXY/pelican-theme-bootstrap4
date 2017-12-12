@@ -71,11 +71,6 @@ ul.archive-list {
     color:#0F0F5FFF;
 }
 
-div.highlight pre {
-  background-color: #fefbf3;
-  margin: 0 0 10px;
-}
-
 .pagination {
     margin-top: 24px;
     padding: 8px;
@@ -135,14 +130,6 @@ main.content-main {
 
 .content-bottom-narrow {
     bottom:128px;
-}
-
-.card a img {
-    margin-bottom: 16px;
-}
-
-.card a img : last-child {
-    margin-bottom: 0px;
 }
 
 .navbar.fixed-bottom ul.navbar-nav {
