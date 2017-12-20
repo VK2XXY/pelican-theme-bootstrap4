@@ -28,33 +28,34 @@
 	color: black;
 }
 .bottom-footer-link-colors {
-	color:#BBBBBB;
+	color:#A1A1A1;
 	text-decoration:none;
 }
 .bottom-footer-link-colors:hover {
-	color:#999999;
+	color:#818181;
 }
 .sidebar-card-header-colors {
-	color:#CCCCCC;
+	color:#F4F4F4;
 }
 .sidebar-card-body-colors {
-	background-color: #F8F8F8;
+	background-color: FBFBFB;
 }
 .sidebar-card-link-colors {
-	color:#888888;
+	color:#AAAAAA;
 	text-decoration:none;
 }
 .sidebar-card-link-colors:hover {
-	color:#9999A3;
+	color:#888888;
 }
 .card-metadata-colors {
 	background-color: #F4F4F4;
 }
 .card-metadata-link-colors {
-	color:#888888;
+	color:#AAAAAA;
+	text-decoration:none;
 }
 .card-metadata-link-colors:hover {
-	color:#9999A3;
+	color:#888888;
 }
 .page-link-colors {
 
