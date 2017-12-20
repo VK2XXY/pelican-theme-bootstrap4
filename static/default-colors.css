@@ -49,10 +49,13 @@
 	text-decoration:none;
 }
 .card-metadata-colors {
-	color:#999999;
+	background-color: #F4F4F4;
 }
 .card-metadata-link-colors {
-	background-color: #F4F4F4;
+	color:#999999;
+}
+.card-metadata-link-colors:hover {
+	color:#999999;
 }
 .page-link-colors {
 
