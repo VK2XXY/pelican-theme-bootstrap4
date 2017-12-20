@@ -1,46 +1,55 @@
 .top-menu-colors {
-	
+	background-color: #F8F8F8;
+	color: black;
 }
 .navbar-toggle-colors {
-	
+	color: black;
+	border-color: black;
 }
 .top-menu-link-colors {
-	
-}		
+	color:#BBBBBB;
+	text-decoration:none;
+}
+.top-menu-link-colors:hover {
+	color:#AAAAAA;
+}
 .top-dropdown-link-colors {
-	
-}	
+	color:#BBBBBB;
+	text-decoration:none;
+}
+.top-dropdown-link-colors:hover {
+	color:#AAAAAA;
+}
 .content-main-colors {
-	
-}				
-.bottom-footer-background-colors {
-	
-}	
-.bottom-footer-link-colors {
-	
-}			
-.bottom-footer-text-colors {
-	
-}			
-.sidebar-card-header-colors {
-	
-}			
-.sidebar-card-body-colors {
-	
-}				
-.sidebar-card-link-colors {
-	
-}			
-.card-metadata-colors {
-	
-}				
-.card-metadata-link-colors {
-	
-}				
-.page-link-colors {
-	
-}						
-.page-item-colors {
-	
-}						
 
+}
+.bottom-footer-background-colors {
+
+}
+.bottom-footer-link-colors {
+
+}
+.bottom-footer-text-colors {
+
+}
+.sidebar-card-header-colors {
+
+}
+.sidebar-card-body-colors {
+
+}
+.sidebar-card-link-colors {
+
+}
+.card-metadata-colors {
+
+}
+.card-metadata-link-colors {
+
+}
+.page-link-colors {
+
+}
+.page-item-colors {
+
+}
