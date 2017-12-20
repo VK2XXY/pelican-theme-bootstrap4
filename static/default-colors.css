@@ -1,20 +1,24 @@
 .top-menu-colors {
-	background-color: #F8F8F8;
+	background-color: #F4F4F4;
 	color: black;
 }
 .navbar-toggle-colors {
-	color: black;
-	border-color: black;
+	color: #A8A8A8;
+	border-color: #A8A8A8;
+}
+.navbar-toggle-colors:hover {
+	color: #888888;
+	border-color: #888888;
 }
 .top-menu-link-colors {
-	color:#AAAAAA;
+	color:#A8A8A8;
 	text-decoration:none;
 }
 .top-menu-link-colors:hover {
 	color:#888888;
 }
 .top-dropdown-link-colors {
-	color:#AAAAAA;
+	color:#A8A8A8;
 	text-decoration:none;
 }
 .top-dropdown-link-colors:hover {
@@ -24,42 +28,46 @@
 	background-color: white;
 }
 .bottom-footer-background-colors {
-	background-color: #F1F1F1;
+	background-color: #FCFCFC;
 	color: black;
 }
 .bottom-footer-link-colors {
-	color:#A1A1A1;
+	color:#AEAEAE;
 	text-decoration:none;
 }
 .bottom-footer-link-colors:hover {
-	color:#818181;
+	color:#8E8E8E;
 }
 .sidebar-card-header-colors {
-	color:#F4F4F4;
+	color:#F9F9F9;
 }
 .sidebar-card-body-colors {
-	background-color: FBFBFB;
+	background-color: white;
 }
 .sidebar-card-link-colors {
-	color:#AAAAAA;
+	color:#ABABAB;
 	text-decoration:none;
 }
 .sidebar-card-link-colors:hover {
-	color:#888888;
+	color:#8B8B8B;
 }
 .card-metadata-colors {
-	background-color: #F4F4F4;
+	background-color: #F9F9F9;
 }
 .card-metadata-link-colors {
-	color:#AAAAAA;
+	color:#ABABAB;
 	text-decoration:none;
 }
 .card-metadata-link-colors:hover {
-	color:#888888;
+	color:#8B8B8B;
 }
 .page-link-colors {
-
+	color:#ABABAB;
+	text-decoration:none;
+}
+.page-link-colors:hover {
+	color:#8B8B8B;
 }
 .page-item-colors {
-
+	color:#ABABAB;
 }
