@@ -41,21 +41,20 @@
 	background-color: #F8F8F8;
 }
 .sidebar-card-link-colors {
-	color:#BBBBBB;
+	color:#888888;
 	text-decoration:none;
 }
-.sidebar-card-link-colors {
-	color:#BBBBBB;
-	text-decoration:none;
+.sidebar-card-link-colors:hover {
+	color:#9999A3;
 }
 .card-metadata-colors {
 	background-color: #F4F4F4;
 }
 .card-metadata-link-colors {
-	color:#999999;
+	color:#888888;
 }
 .card-metadata-link-colors:hover {
-	color:#999999;
+	color:#9999A3;
 }
 .page-link-colors {
 
