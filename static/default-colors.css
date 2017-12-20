@@ -7,24 +7,25 @@
 	border-color: black;
 }
 .top-menu-link-colors {
-	color:#BBBBBB;
+	color:#AAAAAA;
 	text-decoration:none;
 }
 .top-menu-link-colors:hover {
-	color:#AAAAAA;
+	color:#888888;
 }
 .top-dropdown-link-colors {
-	color:#BBBBBB;
+	color:#AAAAAA;
 	text-decoration:none;
 }
 .top-dropdown-link-colors:hover {
-	color:#AAAAAA;
+	color:#888888;
 }
 .content-main-colors {
-
+	background-color: white;
 }
 .bottom-footer-background-colors {
-
+	background-color: #F8F8F8;
+	color: black;
 }
 .bottom-footer-link-colors {
 
