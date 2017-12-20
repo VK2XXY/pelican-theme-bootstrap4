@@ -32,11 +32,11 @@
 	color: black;
 }
 .bottom-footer-link-colors {
-	color:#AEAEAE;
+	color:#A0A0A0;
 	text-decoration:none;
 }
 .bottom-footer-link-colors:hover {
-	color:#8E8E8E;
+	color:#808080;
 }
 .sidebar-card-header-colors {
 	color:#F0F0F0;
@@ -45,28 +45,28 @@
 	background-color: white;
 }
 .sidebar-card-link-colors {
-	color:#ABABAB;
+	color:#A4A4A4;
 	text-decoration:none;
 }
 .sidebar-card-link-colors:hover {
-	color:#8B8B8B;
+	color:#848484;
 }
 .card-metadata-colors {
 	background-color: #F0F0F0;
 }
 .card-metadata-link-colors {
-	color:#ABABAB;
+	color:#A4A4A4;
 	text-decoration:none;
 }
 .card-metadata-link-colors:hover {
-	color:#8B8B8B;
+	color:#848484;
 }
 .page-link-colors {
-	color:#ABABAB;
+	color:#A4A4A4;
 	text-decoration:none;
 }
 .page-link-colors:hover {
-	color:#8B8B8B;
+	color:#848484;
 }
 .page-item-colors {
 	color:#F0F0F0;
