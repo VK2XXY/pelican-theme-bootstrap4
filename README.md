@@ -85,7 +85,6 @@ The css file can use the following classes:
 - `.content-main-colors`					the main content area in general
 - `.bottom-footer-background-colors`		bottom footer in general
 - `.bottom-footer-link-colors`				bottom footer links
-- `.bottom-footer-text-colors`				bottom footer text
 - `.sidebar-card-header-colors`				toggler headings for sidebars
 - `.sidebar-card-body-colors`				content sections for sidebars
 - `.sidebar-card-link-colors`				individual links within content sections for sidebars
@@ -93,8 +92,10 @@ The css file can use the following classes:
 - `.card-metadata-link-colors`				links within metadata sections
 - `.page-link-colors`						links within pagination sections
 - `.page-item-colors`						individual pagination sections
+- `.summary-colors`                         summary sections for article index
+- `.summary-btn-colors`                     "read more..." buttons at end of summary sections.
 
-These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also 
+These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also
 be used to change link selector styles.
 
 The css file can also override bootstrap4 classes, but this is not recommended - you do so at your own risk.

@@ -73,3 +73,13 @@
 .page-item-colors {
 	color:#ECECEC;
 }
+.summary-colors {
+	color:696969;
+}
+.summary-btn-colors {
+	background-color: #ECECEC;
+	color:#999999;
+}
+.summary-btn-colors:hover {
+	color: #797979;
+}
