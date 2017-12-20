@@ -28,7 +28,7 @@
 	background-color: white;
 }
 .bottom-footer-background-colors {
-	background-color: #FCFCFC;
+	background-color: #ECECEC;
 	color: black;
 }
 .bottom-footer-link-colors {
@@ -39,7 +39,7 @@
 	color:#8E8E8E;
 }
 .sidebar-card-header-colors {
-	color:#F9F9F9;
+	color:#F0F0F0;
 }
 .sidebar-card-body-colors {
 	background-color: white;
@@ -52,7 +52,7 @@
 	color:#8B8B8B;
 }
 .card-metadata-colors {
-	background-color: #F9F9F9;
+	background-color: #F0F0F0;
 }
 .card-metadata-link-colors {
 	color:#ABABAB;
@@ -69,5 +69,5 @@
 	color:#8B8B8B;
 }
 .page-item-colors {
-	color:#ABABAB;
+	color:#F0F0F0;
 }
