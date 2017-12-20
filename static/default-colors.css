@@ -31,14 +31,21 @@
 	color:#AAAAAA;
 	text-decoration:none;
 }
-.bottom-footer-text-colors:hover {
+.bottom-footer-link-colors {
+	color:#AAAAAA;
+	text-decoration:none;
+}
+.bottom-footer-link-colors:hover {
 	color:#888888;
 }
+.bottom-footer-text-colors {
+	color:#CCCCCC;
+}
 .sidebar-card-header-colors {
-
+	color:#CCCCCC;
 }
 .sidebar-card-body-colors {
-
+	background-color: #F8F8F8;
 }
 .sidebar-card-link-colors {
 
