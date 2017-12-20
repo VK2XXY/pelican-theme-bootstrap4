@@ -236,7 +236,7 @@
                                  aria-labelledby="categories_heading" data-parent="#sidebar_content">
                                 <div class="card-body sidebar-card-body-colors">
                                     {% for category, articles in categories %}
-                                    <a href="{{ SITEURL }}/{{ category.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ category.url }}"
                                        tabindex="7">{{ category }}</a>
                                     {% endfor %}
                                 </div>
@@ -263,7 +263,7 @@
                                  data-parent="#sidebar_content">
                                 <div class="card-body sidebar-card-body-colors">
                                     {% for tag, articles in tags %}
-                                    <a href="{{ SITEURL }}/{{ tag.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ tag.url }}"
                                        tabindex="8">{{ tag }}</a>
                                     {% endfor %}
                                 </div>
@@ -289,7 +289,7 @@
                                  aria-labelledby="authors_heading" data-parent="#sidebar_content">
                                 <div class="card-body sidebar-card-body-colors">
                                     {% for author, articles in authors %}
-                                    <a href="{{ SITEURL }}/{{ author.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ author.url }}"
                                        tabindex="9">{{ author }}</a>
                                     {% endfor %}
                                 </div>
