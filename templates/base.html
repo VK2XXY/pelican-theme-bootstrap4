@@ -24,7 +24,7 @@
 	<script src="{{ SITEURL }}/theme/popper.min.js"></script>
 	<script src="{{ SITEURL }}/theme/bootstrap.min.js"></script>
     <script src="{{ SITEURL }}/theme/local.js"></script>
-	
+
 	<script>
 	{% block extra_scripts %} {% endblock %}
 	</script>
@@ -61,7 +61,7 @@
 					aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation"
 					tabindex="1">
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -300,15 +300,15 @@
 			</div>
         </div>
     </main>
-	
+
 	<div class="container-fluid" role="region">
     {% include "analytics.html" %}
     </div>
 
     <nav class="navbar fixed-bottom navbar-expand-sm bottom-footer-background-colors" role="navigation">
         <div class="container">
-            <small class="navbar-text mr-auto">Powered by 
-				<a class="bottom-footer-link-colors" href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on 
+            <small class="navbar-text mr-auto">Powered by
+				<a class="bottom-footer-link-colors" href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on
 				<a class="bottom-footer-link-colors" href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
             </small>
 			<ul class="navbar-nav mr-2">
