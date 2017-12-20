@@ -6,10 +6,6 @@
 	color: #A0A0A0;
 	border-color: #A0A0A0;
 }
-.navbar-toggle-colors:hover {
-	color: #808080;
-	border-color: #808080;
-}
 .top-menu-link-colors {
 	color:#A0A0A0;
 }
@@ -79,6 +75,7 @@
 .summary-btn-colors {
 	background-color: #ECECEC;
 	color:#999999;
+	border-color: #999999;
 }
 .summary-btn-colors:hover {
 	color: #797979;
