@@ -24,14 +24,18 @@
 	background-color: white;
 }
 .bottom-footer-background-colors {
-	background-color: #F8F8F8;
+	background-color: #F1F1F1;
 	color: black;
 }
 .bottom-footer-link-colors {
-
+	color:#AAAAAA;
+	text-decoration:none;
 }
-.bottom-footer-text-colors {
-
+.bottom-footer-link-colors {
+	color:#AAAAAA;
+}
+.bottom-footer-text-colors:hover {
+	color:#888888;
 }
 .sidebar-card-header-colors {
 
