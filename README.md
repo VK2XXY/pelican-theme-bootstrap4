@@ -94,6 +94,7 @@ The css file can use the following classes:
 - `.page-item-colors`						individual pagination sections
 - `.summary-colors`                         summary sections for article index
 - `.summary-btn-colors`                     "read more..." buttons at end of summary sections.
+- `.social-colors`                          surrounding colors the social icons section.
 
 These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also
 be used to change link selector styles.
@@ -103,3 +104,4 @@ The css file can also override bootstrap4 classes, but this is not recommended -
 ## Screenshot ##
 
 ![screenshot](screenshot.png)
+![screenshot 2](screenshot_2.png)
