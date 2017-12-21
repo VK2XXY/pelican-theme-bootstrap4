@@ -50,9 +50,11 @@ Your pelican settings file may use the following additional settings:
 
 `SITE_DESCRIPTION = 'description of the website'`, for the description meta tag.
 
-`SHOW_AUTHORS = False`, Determines if the author, and an appropriate link, for each indexed article, is shown in the metadata. This only applies if the article in question has an author.
+`SHOW_AUTHORS = False`, Determines if the author, and an appropriate link, for each indexed article, is shown in the metadata. 
+This only applies if the article in question has an author.
 
-`SHOW_AUTHORS_SIDEBAR = False`, Show a sidebar card listing links for authors of articles. Note that if all articles only ever have one author, an Author sidebar will never be shown anyway.
+`SHOW_AUTHORS_SIDEBAR = False`, Show a sidebar card listing links for authors of articles.
+Note that if all articles only ever have one author, an Author sidebar will never be shown anyway.
 
 `SHOW_CATEGORIES_SIDEBAR = False`, Show a sidebar card listing links for categories.
 
@@ -74,34 +76,36 @@ It is possible to set custom colors or stylesheet settings for your theme.
 
 Add the following setting into your settings file:
 
-`CUSTOM_THEME_COLORS = 'path to custom css file in content directory'`. The path must have no leading slash and reference a stylesheet in your output directory. It is recommended to put the custom stylesheet in your EXTRAS directory, and
-modify STATIC_EXTRAS and EXTRA_PATH_METADATA to reference this file and it's output destination (the same as your CUSTOM_THEME_COLORS setting.)
+`CUSTOM_THEME_COLORS = 'path to custom css file in content directory'`. The path must have no leading slash and reference a stylesheet in your output directory. 
+It is recommended to put the custom stylesheet in your EXTRAS directory, and modify `STATIC_EXTRAS` and `EXTRA_PATH_METADATA` to reference this file 
+and it's output destination (the same as your `CUSTOM_THEME_COLORS` setting.)
 
 The css file can use the following convenience classes:
 
-- `.top-menu-colors`						top menu in general
-- `.navbar-toggle-colors`					navbar toggler
-- `.top-menu-link-colors`					any link or link-like item in the top menu
-- `.top-dropdown-link-colors`				any link or link-like item in a dropdown in the top menu
-- `.content-main-colors`					the main content area in general
+- `.top-menu-colors`						        top menu in general
+- `.navbar-toggle-colors`					      navbar toggler
+- `.top-menu-link-colors`					      any link or link-like item in the top menu
+- `.top-dropdown-link-colors`				    any link or link-like item in a dropdown in the top menu
+- `.content-main-colors`					      the main content area in general
 - `.bottom-footer-background-colors`		bottom footer in general
-- `.bottom-footer-link-colors`				bottom footer links
-- `.sidebar-card-header-colors`				toggler headings for sidebars
-- `.sidebar-card-body-colors`				content sections for sidebars
-- `.sidebar-card-link-colors`				individual links within content sections for sidebars
-- `.card-metadata-colors`					metadata sections for articles, article index, and for archives, in general
-- `.card-metadata-link-colors`				links within metadata sections
-- `.page-link-colors`						links within pagination sections
-- `.page-item-colors`						individual pagination sections
-- `.summary-colors`                         summary sections for article index
-- `.summary-btn-colors`                     "read more..." buttons at end of summary sections.
-- `.social-colors`                          colors surrounding the social icons section.
+- `.bottom-footer-link-colors`				  bottom footer links
+- `.sidebar-card-header-colors`				  toggler headings for sidebars
+- `.sidebar-card-body-colors`				    content sections for sidebars
+- `.sidebar-card-link-colors`				    individual links within content sections for sidebars
+- `.card-metadata-colors`					      metadata sections for articles, article index, and for archives, in general
+- `.card-metadata-link-colors`				  links within metadata sections
+- `.page-link-colors`						        links within pagination sections
+- `.page-item-colors`						        individual pagination sections
+- `.summary-colors`                     summary sections for article index
+- `.summary-btn-colors`                 "read more..." buttons at end of summary sections.
+- `.social-colors`                      colors surrounding the social icons section.
 
-These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also be used to change link selector styles.
+These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. 
+Link classes could also be used to change link selector styles.
 
 The css file can also override bootstrap4 classes, but this is not recommended - you do so at your own risk.
 
 ## Screenshot ##
 
 ![screenshot](screenshot.png)
-![screenshot 2](screenshot_2.png)
+![screenshot 2](screenshot2.png)
