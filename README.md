@@ -8,7 +8,7 @@ This theme relies on Bootstrap 4 and Jquery libraries.
 
 
 12/20/2017:
-- *Added capability to override color scheme with custom stylesheet.*
+- *Added capability to override color scheme.*
 
 12/11/2017:
 
@@ -74,9 +74,10 @@ It is possible to set custom colors or stylesheet settings for your theme.
 
 Add the following setting into your settings file:
 
-`CUSTOM_THEME_COLORS = 'path to custom css file in content directory'`. the path must have no leading slash. It is recommended the path use a subdirectory within your EXTRAS list.
+`CUSTOM_THEME_COLORS = 'path to custom css file in content directory'`. The path must have no leading slash and reference a stylesheet in your output directory. It is recommended to put the custom stylesheet in your EXTRAS directory, and
+modify STATIC_EXTRAS and EXTRA_PATH_METADATA to reference this file and it's output destination (the same as your CUSTOM_THEME_COLORS setting.)
 
-The css file can use the following classes:
+The css file can use the following convenience classes:
 
 - `.top-menu-colors`						top menu in general
 - `.navbar-toggle-colors`					navbar toggler
@@ -94,10 +95,9 @@ The css file can use the following classes:
 - `.page-item-colors`						individual pagination sections
 - `.summary-colors`                         summary sections for article index
 - `.summary-btn-colors`                     "read more..." buttons at end of summary sections.
-- `.social-colors`                          surrounding colors the social icons section.
+- `.social-colors`                          colors surrounding the social icons section.
 
-These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also
-be used to change link selector styles.
+These classes are mostly intended to override colors. Some classes (such as for links and text) are better used to override foreground colors only. Link classes could also be used to change link selector styles.
 
 The css file can also override bootstrap4 classes, but this is not recommended - you do so at your own risk.
 
