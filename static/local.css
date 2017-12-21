@@ -14,10 +14,6 @@ body {
     display: block;
 }
 
-.card-bg {
-    background-color:#EFF3FA;
-}
-
 ul.archive-list {
     list-style-type: none;
     list-style-position: outside;
@@ -29,12 +25,6 @@ ul.archive-list {
 
 .btn-summary {
     display: inline;
-    background-color: #CAD7EFFF;
-    color:#0F0F5F9F;
-}
-
-.btn-summary:hover {
-    color:#0F0F5FFF;
 }
 
 .pagination {
@@ -42,45 +32,7 @@ ul.archive-list {
     padding: 8px;
 }
 
-.bg-light-blue {
-    background-color: #CAD7EF;
-}
-
-.navbar-light-blue {
-    color:#CAD7EF;
-}
-
-.navbar-light-blue .navbar-toggler {
-    color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);
-}
-
-.navbar-light-blue .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(20, 05, 59, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-.navbar-light-blue .navbar-brand {
-    color:#070720;
-}
-
-.navbar-light-blue .navbar-brand:hover {
-    color:#05001A;
-}
-
-.navbar-light-blue .navbar-nav .nav-link {
-    color:#697CBF;
-}
-
-.navbar-light-blue .navbar-nav .nav-link:hover {
-    color:#150752;
-}
-
-.navbar-light-blue .navbar-text {
-    color:#8788A2;
-}
-
 main.content-main {
-    background-color:#FFFFFF00;
     position: absolute;
     left:0;
     top:64px;
@@ -88,6 +40,15 @@ main.content-main {
     overflow-y:scroll;
     overflow-x:none;
     z-index:-1;
+}
+
+.top-menu-background-color .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.5);
+}
+
+.navbar-toggler .navbar-toggler-icon-custom {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 .content-bottom-normal {
@@ -100,24 +61,6 @@ main.content-main {
 
 .navbar.fixed-bottom ul.navbar-nav {
     flex-direction: row;
-}
-
-#sidebar_content .card-header a {
-    color: #697CBF;
-    text-decoration: none;
-}
-
-#sidebar_content .card-header a:hover {
-    color: #150752;
-}
-
-#sidebar_content .card-body a {
-    color: #697CBF;
-    text-decoration: none;
-}
-
-#sidebar_content .card-body a:hover {
-    color: #150752;
 }
 
 .social a[href*='activestate.com']:before {content: url('./images/icons/activestate.png'); margin-right: 2px; vertical-align: -3px;}

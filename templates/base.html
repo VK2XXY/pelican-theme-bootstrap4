@@ -12,6 +12,11 @@
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/bootstrap.min.css">
 	<link href="{{ SITEURL }}/theme/local.css" rel="stylesheet">
 	<link href="{{ SITEURL }}/theme/pygments.css" rel="stylesheet">
+	{% if CUSTOM_THEME_COLORS %}
+		<link href="{{ SITEURL }}/{{ CUSTOM_THEME_COLORS }}" rel="stylesheet">
+	{% else %}
+		<link href="{{ SITEURL }}/theme/default-colors.css" rel="stylesheet">
+	{% endif %}
     {% block extra_css %} {% endblock %}
 
     <!-- Scripts -->
@@ -45,25 +50,25 @@
 <body class="m-3">
 
 	{% include "github.html" %}
-	<nav class="navbar navbar-expand-sm fixed-top navbar-light-blue bg-light-blue" role="navigation">
+	<nav class="navbar navbar-expand-sm fixed-top top-menu-colors" role="navigation">
         <div class="container">
 			<a class="navbar-brand" href="{{ SITEURL }}/" aria-label="Link to home page"
 			tabindex="1">
 				<img src="/images/sitebrand.png" width="30" height="30" alt="Website Brand">
 			</a>
-			<button type="button" class="navbar-toggler"
+			<button type="button" class="navbar-toggler navbar-toggle-colors"
 					data-toggle="collapse" data-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation"
 					tabindex="1">
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon navbar-toggler-icon-custom"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				{% if DISPLAY_PAGES_ON_MENU %}
 				<ul class="navbar-nav float-left mr-auto">
 					{% for page in pages %}
-					<li class="nav-item"><a class="nav-link" href="{{ SITEURL }}/{{ page.url }}"
+					<li class="nav-item"><a class="nav-link top-menu-link-colors" href="{{ SITEURL }}/{{ page.url }}"
 						tabindex="2" aria-label="page, {{ page.title }}">{{ page.title }}</a></li>
 					{% endfor %}
 				</ul>
@@ -72,7 +77,7 @@
 				{% if MENUITEMS %}
 				<ul class="navbar-nav float-left mr-auto">
 					{% for title, link in MENUITEMS %}
-					<li class="nav-item"><a class="nav-link" aria-label="nav menu item, {{ title }}"
+					<li class="nav-item"><a class="nav-link top-menu-link-colors" aria-label="nav menu item, {{ title }}"
 											href="{{ link }}" tabindex="3">{{ title }}</a></li>
 					{% endfor %}
 				</ul>
@@ -81,7 +86,7 @@
 				<ul class="navbar-nav float-right">
 					{% if SHOW_BLOGROLL_SUBMENU_IN_NAVBAR %}
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlogroll"
+						<a class="nav-link dropdown-toggle top-menu-link-colors" href="#" id="navbarDropdownBlogroll"
 						   role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 						   tabindex="6">
@@ -89,7 +94,7 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownBlogroll">
 							{% for name, link in LINKS %}
-							<a class="dropdown-item" tabindex="6"
+							<a class="dropdown-item top-dropdown-link-colors" tabindex="6"
 							   href="{{ link }}">
 								{{ name }}</a>
 							{% endfor %}
@@ -98,14 +103,14 @@
 					{% endif %}
 					{% if SHOW_CATEGORIES_SUBMENU_IN_NAVBAR %}
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
+						<a class="nav-link dropdown-toggle top-menu-link-colors" href="#" id="navbarDropdownCategories" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 						   tabindex="7">
 							<small>Categories</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
 							{% for category, articles in categories %}
-							<a class="dropdown-item" tabindex="7"
+							<a class="dropdown-item top-dropdown-link-colors" tabindex="7"
 							   href="{{ SITEURL }}/{{ category.url }}">
 								{{ category }}</a>
 							{% endfor %}
@@ -114,14 +119,14 @@
 					{% endif %}
 					{% if SHOW_TAGS_SUBMENU_IN_NAVBAR %}
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button"
+						<a class="nav-link dropdown-toggle top-menu-link-colors" href="#" id="navbarDropdownTags" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 						   tabindex="8">
 							<small>Tags</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownTags">
 							{% for tag, articles in tags %}
-							<a class="dropdown-item" tabindex="8"
+							<a class="dropdown-item top-dropdown-link-colors" tabindex="8"
 							   href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
 							{% endfor %}
 						</div>
@@ -129,21 +134,21 @@
 					{% endif %}
 					{% if SHOW_AUTHORS_SUBMENU_IN_NAVBAR %}
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button"
+						<a class="nav-link dropdown-toggle top-menu-link-colors" href="#" id="navbarDropdownAuthors" role="button"
 						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
 						   tabindex="9">
 							<small>Authors</small>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
 							{% for author, articles in authors %}
-							<a class="dropdown-item" tabindex="9"
+							<a class="dropdown-item top-dropdown-link-colors" tabindex="9"
 							   href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
 							{% endfor %}
 						</div>
 					</li>
 					{% endif %}
 					<li class="nav-item">
-						<a class="nav-link" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
+						<a class="nav-link top-menu-link-colors" aria-label="page, archives" href="{{ SITEURL }}/archives.html"
 							tabindex="10">
 							<small>Archives</small></a>
 					</li>
@@ -153,7 +158,7 @@
 	</nav>
 
     <noscript>
-        <main role="main" class="content-main">
+        <main role="main" class="content-main content-main-colors">
             <p class="lead">
                 <em>This page uses bootstrap which relies on Javascript.
                 Until you enable Javascript, some parts of this site will not work properly.</em>
@@ -161,7 +166,7 @@
         </main>
     </noscript>
 
-    <main role="main" class="content-main content-bottom-normal">
+    <main role="main" class="content-main content-main-colors content-bottom-normal">
 
         <div class="container">
             <div class="row">
@@ -190,9 +195,10 @@
 
 						{% if SHOW_BLOGROLL_SIDEBAR and LINKS|length > 0 %}
 						<div class="card" role="navigation">
-                            <div class="card-header card-bg" role="tab" id="blogroll_heading">
+                            <div class="card-header sidebar-card-header-colors" role="tab" id="blogroll_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#blogroll_collapse"
+										class="sidebar-card-header-colors"
                                        aria-expanded="true"
                                        aria-label="Blogroll Sidebar"
                                        aria-controls="blogroll_collapse" tabindex="6">
@@ -202,9 +208,9 @@
 
                             <div id="blogroll_collapse" class="collapse show" role="tabpanel"
                                  aria-labelledby="blogroll_heading" data-parent="#sidebar_content">
-                                <div class="card-body">
+                                <div class="card-body sidebar-card-body-colors">
                                     {% for name, link in LINKS %}
-                                    <a href="{{ link }}" tabindex="6">{{ name }}</a>
+                                    <a class="sidebar-card-link-colors" href="{{ link }}" tabindex="6">{{ name }}</a>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -214,9 +220,10 @@
 						{% if SHOW_CATEGORIES_SIDEBAR and categories and
                             categories|length > 0 %}
                         <div class="card" role="navigation">
-                            <div class="card-header card-bg" role="tab" id="categories_heading">
+                            <div class="card-header sidebar-card-header-colors" role="tab" id="categories_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#categories_collapse"
+									   class="sidebar-card-header-colors"
                                        aria-expanded="false"
                                        aria-label="Categories Sidebar"
                                        aria-controls="categories_collapse"
@@ -227,9 +234,9 @@
 
                             <div id="categories_collapse" class="collapse hide" role="tabpanel"
                                  aria-labelledby="categories_heading" data-parent="#sidebar_content">
-                                <div class="card-body">
+                                <div class="card-body sidebar-card-body-colors">
                                     {% for category, articles in categories %}
-                                    <a href="{{ SITEURL }}/{{ category.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ category.url }}"
                                        tabindex="7">{{ category }}</a>
                                     {% endfor %}
                                 </div>
@@ -239,9 +246,10 @@
 
 						{% if SHOW_TAGS_SIDEBAR and tags and tags|length > 0 %}
                         <div class="card" role="navigation">
-                            <div class="card-header card-bg" role="tab" id="tags_heading">
+                            <div class="card-header sidebar-card-header-colors" role="tab" id="tags_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#tags_collapse"
+									   class="sidebar-card-header-colors"
                                        aria-expanded="false"
                                        aria-label="Tags Sidebar"
                                        aria-controls="tags_collapse"
@@ -253,9 +261,9 @@
                             <div id="tags_collapse" class="collapse hide" role="tabpanel"
                                  aria-labelledby="tags_heading"
                                  data-parent="#sidebar_content">
-                                <div class="card-body">
+                                <div class="card-body sidebar-card-body-colors">
                                     {% for tag, articles in tags %}
-                                    <a href="{{ SITEURL }}/{{ tag.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ tag.url }}"
                                        tabindex="8">{{ tag }}</a>
                                     {% endfor %}
                                 </div>
@@ -265,9 +273,10 @@
 
                         {% if SHOW_AUTHORS_SIDEBAR and authors and authors|length > 1 %}
                         <div class="card" role="navigation">
-                            <div class="card-header card-bg" role="tab" id="authors_heading">
+                            <div class="card-header sidebar-card-header-colors" role="tab" id="authors_heading">
                                 <h3 class="mb-0">
                                     <a data-toggle="collapse" href="#authors_collapse"
+									   class="sidebar-card-header-colors"
                                        aria-expanded="false"
                                        aria-label="Authors Sidebar"
                                        aria-controls="authors_collapse" tabindex="9">
@@ -278,9 +287,9 @@
 
                             <div id="authors_collapse" class="collapse hide" role="tabpanel"
                                  aria-labelledby="authors_heading" data-parent="#sidebar_content">
-                                <div class="card-body">
+                                <div class="card-body sidebar-card-body-colors">
                                     {% for author, articles in authors %}
-                                    <a href="{{ SITEURL }}/{{ author.url }}"
+                                    <a class="sidebar-card-link-colors" href="{{ SITEURL }}/{{ author.url }}"
                                        tabindex="9">{{ author }}</a>
                                     {% endfor %}
                                 </div>
@@ -295,23 +304,22 @@
 			</div>
         </div>
     </main>
-	
+
 	<div class="container-fluid" role="region">
     {% include "analytics.html" %}
     </div>
 
-    <nav class="navbar fixed-bottom navbar-expand-sm navbar-light-blue bg-light-blue" role="navigation">
+    <nav class="navbar fixed-bottom navbar-expand-sm bottom-footer-colors" role="navigation">
         <div class="container">
-            <small class="navbar-text mr-auto">Powered by <a
-                        href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on <a
-                        href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
+            <small class="navbar-text mr-auto">Powered by
+				<a class="bottom-footer-link-colors" href="http://getpelican.com/" aria-label="Tool used to create this website, Pelican Static Site Generator" tabindex="201">Pelican</a>. Theme based on <a class="bottom-footer-link-colors" href="http://getbootstrap.com/" aria-label="Tool used to create theme for this website, Bootstrap v4.0" tabindex="202">Bootstrap 4.0</a>
             </small>
-			<ul class="navbar-nav mr-2">
+			<ul class="navbar-nav social-colors mr-2">
                 {% for name, link in SOCIAL %}
                 <li class="social nav-item"><a href="{{ link }}" aria-label="social media {{ name }}" tabindex="203"></a></li>
                 {% endfor %}
             </ul>
-            <small class="navbar-text" tabindex="300" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
+            <small class="navbar-text" class="bottom-footer-text-colors" tabindex="300" style="margin-left:8px;">&copy; {{ AUTHOR }}</small>
         </div>
     </nav>
 

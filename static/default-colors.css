@@ -1,0 +1,81 @@
+.top-menu-colors {
+	background-color: #F0F0F0;
+	color: black;
+}
+.navbar-toggle-colors {
+	color: #A0A0A0;
+	border-color: #A0A0A0;
+}
+.top-menu-link-colors {
+	color:#A0A0A0;
+}
+.top-menu-link-colors:hover {
+	color:#808080;
+	text-decoration:none;
+}
+.top-dropdown-link-colors {
+	color:#A0A0A0;
+}
+.top-dropdown-link-colors:hover {
+	color:#808080;
+	text-decoration:none;
+}
+.content-main-colors {
+	background-color: white;
+}
+.bottom-footer-colors {
+	background-color: #E8E8E8;
+	color: black;
+}
+.bottom-footer-link-colors {
+	color:#909090;
+	text-decoration:none;
+}
+.bottom-footer-link-colors:hover {
+	color:#707070;
+}
+.sidebar-card-header-colors {
+	background-color:#ECECEC;
+	color:#797979;
+}
+.sidebar-card-header-colors:HOVER {
+	color:#797979;
+	text-decoration: none;
+}
+.sidebar-card-body-colors {
+	background-color: white;
+}
+.sidebar-card-link-colors {
+	color:#999999;
+}
+.sidebar-card-link-colors:hover {
+	color:#797979;
+}
+.card-metadata-colors {
+	background-color: #ECECEC;
+}
+.card-metadata-link-colors {
+	color:#999999;
+}
+.card-metadata-link-colors:hover {
+	color:#797979;
+}
+.page-link-colors {
+	color:#999999;
+}
+.page-link-colors:hover {
+	color:#797979;
+}
+.page-item-colors {
+	color:#ECECEC;
+}
+.summary-colors {
+	color:696969;
+}
+.summary-btn-colors {
+	background-color: #ECECEC;
+	color:#999999;
+}
+.summary-btn-colors:hover {
+	color: #797979;
+}

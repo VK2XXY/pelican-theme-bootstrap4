@@ -1,15 +1,16 @@
 <div class="container-fluid">
-    Permalink: <a href="{{ SITEURL }}/{{ article.url }}" aria-label="article {{ article.title }}" tabindex="21">{{ article.date }}</a>
+    Permalink: <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ article.url }}"
+    aria-label="article {{ article.title }}" tabindex="21">{{ article.date }}</a>
 
     {% if SHOW_AUTHORS and article.author %}
-        by <a href="{{ SITEURL }}/{{ article.author.url }}"
+        by <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ article.author.url }}"
               aria-label="list of all articles by author {{ article.author }}" tabindex="21">
             {{ article.author }}
         </a>
-    {% endif %} in <a href="{{ SITEURL }}/{{ article.category.url }}" tabindex="21"
+    {% endif %} in <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ article.category.url }}" tabindex="21"
                       aria-label="list of all articles in category {{ article.category }}">{{ article.category }}</a>
     {% if article.tags %}
         tags: {% for tag in article.tags %}
-        <a href="{{ SITEURL }}/{{ tag.url }}" tabindex="21"
+        <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ tag.url }}" tabindex="21"
             aria-label="list of all articles with tag {{ tag }}">{{ tag }}</a> {% endfor %}{% endif %}
 </div>
