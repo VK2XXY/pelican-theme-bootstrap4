@@ -1,5 +1,6 @@
 <div class="container-fluid">
-    Permalink: <a href="{{ SITEURL }}/{{ article.url }}" aria-label="article {{ article.title }}" tabindex="21">{{ article.date }}</a>
+    Permalink: <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ article.url }}"
+    aria-label="article {{ article.title }}" tabindex="21">{{ article.date }}</a>
 
     {% if SHOW_AUTHORS and article.author %}
         by <a class="card-metadata-link-colors" href="{{ SITEURL }}/{{ article.author.url }}"
