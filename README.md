@@ -7,6 +7,9 @@ This theme relies on Bootstrap 4 and Jquery libraries.
 ## changelog ##
 
 
+02/20/2018:
+- *Updated to Bootstrap 4.0.0.*
+
 12/20/2017:
 - *Added capability to override color scheme with custom stylesheet.*
 
